@@ -19,7 +19,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY})
 
 add_definitions(-Wall -g -O2 -std=c++11)
 
-add_executable(son-of-mars
+add_executable(game
   # Julien Bernard Gameskel (https://github.com/jube/gameskel)
   # base
   game/AssetManager.cc

@@ -12,7 +12,7 @@
 #include <game/ModelManager.h>
 #include <game/Queue.h>
 #include <game/Random.h>
-#include <game/RessourceManager.h>
+#include <game/ResourceManager.h>
 #include <game/Singleton.h>
 #include <game/Vector.h>
 #include <game/WindowGeometry.h>
