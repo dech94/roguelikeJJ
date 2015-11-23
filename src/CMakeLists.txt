@@ -9,7 +9,6 @@ set(CMAKE_MODULE_PATH
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SFML2 REQUIRED sfml-graphics>=2.1 sfml-audio>=2.1)
-find_package(Box2D REQUIRED)
 find_package(Boost REQUIRED COMPONENTS filesystem system)
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/local/config.h.in ${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/local/config.h)
@@ -19,7 +18,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}${CMAKE_FILES_DIRECTORY})
 
 add_definitions(-Wall -g -O2 -std=c++11)
 
-add_executable(game
+add_executable(Game
   # Julien Bernard Gameskel (https://github.com/jube/gameskel)
   # base
   game/AssetManager.cc
@@ -40,13 +39,14 @@ add_executable(game
   # model
   game/Model.cc
   game/ModelManager.cc
-
+  #perlin
+  local/Noise.cc
+  local/Map.cc
   #game
   Game.cpp
 )
 
-target_link_libraries(game
+target_link_libraries(Game
 	${SFML2_LIBRARIES}
-	${BOX2D_LIBRARIES}
 	${Boost_LIBRARIES}
 )

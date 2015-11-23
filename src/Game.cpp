@@ -6,6 +6,7 @@
 #include <game/Control.h>
 #include <game/Entity.h>
 #include <game/EntityManager.h>
+#include <game/EventManager.h>
 #include <game/Id.h>
 #include <game/Log.h>
 #include <game/Model.h>
@@ -17,14 +18,16 @@
 #include <game/Vector.h>
 #include <game/WindowGeometry.h>
 #include <game/WindowSettings.h>
+#include <local/Noise.h>
+#include <local/Map.h>
 
 int main (void)
 {
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 800;
-  static constexpr unsigned INITIAL_HEIGHT = 600;
+  static constexpr unsigned INITIAL_WIDTH = 500;
+  static constexpr unsigned INITIAL_HEIGHT = 500;
 
   game::WindowSettings settings(INITIAL_WIDTH, INITIAL_HEIGHT, "Game");
   game::WindowGeometry geometry(INITIAL_WIDTH, INITIAL_HEIGHT);
@@ -32,12 +35,6 @@ int main (void)
   sf::RenderWindow window;
   settings.applyTo(window);
   window.setKeyRepeatEnabled(false);
-
-  // add cameras
-  game::CameraManager cameras;
-
-  game::FixedRatioCamera mainCamera(INITIAL_WIDTH, INITIAL_HEIGHT, {INITIAL_WIDTH * 0.5f, INITIAL_HEIGHT * 0.5f});
-  cameras.addCamera(mainCamera);
 
   // add actions
   game::ActionManager actions;
@@ -51,13 +48,21 @@ int main (void)
   fullscreenAction.addKeyControl(sf::Keyboard::F);
   actions.addAction(fullscreenAction);
 
-  // Setup Box2d engine
-  b2World b2_world(b2Vec2(0.0f, 0.0f));
-
   // Events manager 
   game::EventManager events;
 
   game::EntityManager mainEntities;
+
+  // map
+
+  local::Map map(INITIAL_WIDTH,INITIAL_HEIGHT);
+  map.Compute();
+  sf::VertexArray pixel = map.Print();
+
+  //noise
+
+  local::Noise noise();
+
 
   // main loop
   game::Clock clock;
@@ -68,7 +73,6 @@ int main (void)
 
     while (window.pollEvent(event)) {
       actions.update(event);
-      cameras.update(event);
       geometry.update(event);
     }
 
@@ -81,12 +85,10 @@ int main (void)
       settings.applyTo(window);
       auto sz = window.getSize();
 
-      // fake resize event (not sent when going fullscreen before SFML 2.3.1)
       sf::Event event;
       event.type = sf::Event::Resized;
       event.size.width = sz.x;
       event.size.height = sz.y;
-      cameras.update(event);
       geometry.update(event);
     }
 
@@ -94,14 +96,13 @@ int main (void)
     auto elapsed = clock.restart();
     auto dt = elapsed.asSeconds();
     mainEntities.update(dt);
-    b2_world.Step(dt, 8, 3);
 
     // render
-    window.clear(sf::Color::White);
+    window.clear();
 
-    mainCamera.configure(window);
     mainEntities.render(window);
-    b2_world.DrawDebugData();
+
+    window.draw(pixel);
 
     window.display();
 

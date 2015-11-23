@@ -1,4 +1,4 @@
-- tableau de VECTOR
-- créer une méthode affichage map
-- fonctionnement Random engine (remplir le vector m_gradiant et utilisation de cmath.h pour les angles en gradiant, de 0 à 2Pi)
-- classe bruit
+- tableau de VECTOR -> fait
+- créer une méthode affichage map -> fait
+- fonctionnement Random engine (remplir le vector m_gradiant et utilisation de cmath.h pour les angles en gradiant, de 0 à 2Pi) -> fait
+- classe bruit -> en cours

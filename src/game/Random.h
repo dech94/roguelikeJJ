@@ -19,13 +19,12 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-#ifndef GAME_RANDOM_H
-#define GAME_RANDOM_H
+#ifndef RANDOM_H
+#define RANDOM_H
 
 #include <random>
 
 namespace game {
-
   /**
    * @ingroup base
    */
@@ -50,5 +49,4 @@ namespace game {
   };
 
 }
-
-#endif // GAME_RANDOM_H
+#endif // RANDOM_H
