@@ -11,23 +11,37 @@
 #include <../game/Vector.h>
 
 namespace local {
-  class Noise {
-  public:
-    	Noise();
-	~Noise();
-	void Compute();
-	float linear_interpolate(float a, float b, float x);
+	class Noise {
+	public:
+		Noise();
+		~Noise();
+		float Compute(float x, float y);
 
-  private:
-	std::mt19937_64 engine;
-	std::array<game::Vector2f, 256> m_grad;
-	std::array<uint8_t, 256> m_permut;
+	private:
+		std::mt19937_64 engine;
+		std::array<game::Vector2f, 256> m_grad;
+		std::array<uint8_t, 256> m_permut;
 
-	 const game::Vector2f& get(uint8_t i, uint8_t j) const
-	{
-		uint8_t index = i + m_permut.at(j);
-		return m_grad.at(index);
-	}
-  };
+		game::Vector2f& getGrad(uint8_t i, uint8_t j)
+		{
+			uint8_t index = i + m_permut.at(j);
+			return m_grad.at(index);
+		}
+
+		float prodScal(game::Vector2f a, game::Vector2f b)
+		{
+			return a.x * b.x + a.y + b.y;
+		}
+
+		 float linear_interpolate(float a, float b, float x)
+		{
+			return a * (1.0 - x) + b * x;
+		}
+
+		float cos_interpolate(float x)
+		{
+			return (1.0 - std::cos(M_PI * x)) * 0.5;
+		}
+	};
 }
 #endif // NOISE_H

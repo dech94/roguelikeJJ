@@ -2,48 +2,54 @@
 
 namespace local {
 
-Noise::Noise()
-{
-	// generate gradients
-	std::uniform_real_distribution<float> borne_grad(0.0, 2.0 * M_PI);
-	for (size_t i = 0; i<m_grad.size() ; ++i) 
+	Noise::Noise()
 	{
-		float angle = borne_grad(engine);
-		m_grad[i].x = std::cos(angle);
-		m_grad[i].y = std::sin(angle);
+		// generate gradients
+		std::uniform_real_distribution<float> borne_grad(0.0, 2.0 * M_PI);
+		for (size_t i = 0; i<m_grad.size() ; ++i) 
+		{
+			float angle = borne_grad(engine);
+			m_grad[i].x = std::cos(angle);
+			m_grad[i].y = std::sin(angle);
+		}
+
+		// initialize permutation
+		for (uint8_t i = 0; i < 255; ++i)
+		{
+			m_permut[i] = i;
+		}
+
+		m_permut[255] = 255; // On place 255 à la fin du tableau de permutation
+
+		// generate permutation
+		std::uniform_int_distribution<uint8_t> borne_permut(0, 255);
+		for (unsigned i = 0; i < 2560; ++i)
+		{
+			uint8_t j = borne_permut(engine);
+			uint8_t k = borne_permut(engine);
+			std::swap(m_permut[j], m_permut[k]);
+		}
 	}
 
-	// initialize permutation
-	for (uint8_t i = 0; i < 256; ++i)
+	Noise::~Noise()
 	{
-		m_permut[i] = i;
+
 	}
 
-	//m_perm[255] = 255; // On place 255 à la fin du tableau de permutation
-
-	// generate permutation
-	std::uniform_int_distribution<uint8_t> borne_permut(0, 255);
-	for (unsigned i = 0; i < 2560; ++i)
+	float Noise::Compute(float x, float y)
 	{
-		uint8_t j = borne_permut(engine);
-		uint8_t k = borne_permut(engine);
-		std::swap(m_permut[j], m_permut[k]);
+		uint8_t X = (uint8_t) x%256;
+		uint8_t Y = (uint8_t) y%256;
+
+		float nw = prodScal(getGrad(X,Y),{0,0});
+		float ne = prodScal(getGrad(X+1,Y),{-1,0});
+		float sw = prodScal(getGrad(X,Y+1),{0,-1});
+		float se = prodScal(getGrad(X+1,Y+1),{-1,-1});
+
+		float n = linear_interpolate(nw, ne, cos_interpolate(0));
+		float s = linear_interpolate(sw, se, cos_interpolate(0));
+
+		return linear_interpolate(n, s, cos_interpolate(0));
 	}
-}
-
-Noise::~Noise()
-{
-
-}
-
-void Compute()
-{
-	//TODO
-}
-
-float Noise::linear_interpolate(float a, float b, float x)
-{
-	return (1. - x) * a + x * b;
-}
 
 }
