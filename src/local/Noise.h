@@ -8,14 +8,17 @@
 #include <array>
 #include <random>
 #include <cmath>
+#include <cassert>
 #include <../game/Vector.h>
+#include <chrono>
 
 namespace local {
 	class Noise {
 	public:
-		Noise();
-		~Noise();
+		explicit Noise();
+		virtual ~Noise();
 		float Compute(float x, float y);
+		float Stack(int nbAppel, float persistance, float frequence, float x, float y);
 
 	private:
 		std::mt19937_64 engine;

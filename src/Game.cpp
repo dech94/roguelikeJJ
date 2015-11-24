@@ -26,8 +26,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 500;
-  static constexpr unsigned INITIAL_HEIGHT = 500;
+  static constexpr unsigned INITIAL_WIDTH = 1000;
+  static constexpr unsigned INITIAL_HEIGHT = 600;
 
   game::WindowSettings settings(INITIAL_WIDTH, INITIAL_HEIGHT, "Game");
   game::WindowGeometry geometry(INITIAL_WIDTH, INITIAL_HEIGHT);
