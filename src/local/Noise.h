@@ -31,9 +31,9 @@ namespace local {
 			return m_grad.at(index);
 		}
 
-		float prodScal(game::Vector2f a, game::Vector2f b)
+		float prodScal(const game::Vector2f& a, const game::Vector2f& b)
 		{
-			return a.x * b.x + a.y + b.y;
+			return a.x * b.x + a.y * b.y;
 		}
 
 		 float linear_interpolate(float a, float b, float x)

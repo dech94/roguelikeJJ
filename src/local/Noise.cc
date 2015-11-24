@@ -4,7 +4,7 @@ namespace local {
 
 	Noise::Noise()
 	{
-		//seed engine
+		//seed engine (en parametre du constr)
 		typedef std::chrono::high_resolution_clock myclock;
 		myclock::time_point beginning = myclock::now();
 		myclock::duration d = myclock::now() - beginning;
@@ -45,21 +45,21 @@ namespace local {
 
 	float Noise::Compute(float x, float y)
 	{
-		uint8_t X = (uint8_t) x%256;
+		uint8_t X = (uint8_t) std::fmod(x,256);
 		float rx = std::fmod(x,1);
 
-		uint8_t Y = (uint8_t) y%256;
-		float ry = std::fmod(x,1);
+		uint8_t Y = (uint8_t) std::fmod(y,256);
+		float ry = std::fmod(y,1);
 
 		float nw = prodScal(getGrad(X,Y),{rx,ry});
 		float ne = prodScal(getGrad(X+1,Y),{rx-1,ry});
 		float sw = prodScal(getGrad(X,Y+1),{rx,ry-1});
 		float se = prodScal(getGrad(X+1,Y+1),{rx-1,ry-1});
 
-		float n = linear_interpolate(nw, ne, cos_interpolate(rx));
-		float s = linear_interpolate(sw, se, cos_interpolate(rx));
+		float n = linear_interpolate(nw, ne, rx); //cos_interpolate(rx));
+		float s = linear_interpolate(sw, se, rx); // cos_interpolate(rx));
 
-		return linear_interpolate(n, s, cos_interpolate(ry));
+		return linear_interpolate(n, s, ry); //cos_interpolate(ry));
 	}
 
 	float Noise::Stack(int nbAppel, float persistance, float frequence, float x, float y)
