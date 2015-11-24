@@ -51,9 +51,9 @@ namespace local {
 		uint8_t Y = (uint8_t) std::fmod(y,256);
 		float ry = std::fmod(y,1);
 
-		float nw = prodScal(getGrad(X,Y),{rx,ry});
-		float ne = prodScal(getGrad(X+1,Y),{rx-1,ry});
-		float sw = prodScal(getGrad(X,Y+1),{rx,ry-1});
+		float nw = prodScal(getGrad(X  ,Y  ),{rx  ,ry  });
+		float ne = prodScal(getGrad(X+1,Y  ),{rx-1,ry  });
+		float sw = prodScal(getGrad(X  ,Y+1),{rx  ,ry-1});
 		float se = prodScal(getGrad(X+1,Y+1),{rx-1,ry-1});
 
 		float n = linear_interpolate(nw, ne, rx); //cos_interpolate(rx));

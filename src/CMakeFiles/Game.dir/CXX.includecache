@@ -6,21 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.cc
-Map.h
-/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.h
-cstdio
--
-
-/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.h
-stdlib.h
--
-stdio.h
--
-vector
--
-SFML/Graphics.hpp
--
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.cc
 Noise.h
 /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.h
 
