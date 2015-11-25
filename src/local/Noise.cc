@@ -56,10 +56,10 @@ namespace local {
 		float sw = prodScal(getGrad(X  ,Y+1),{rx  ,ry-1});
 		float se = prodScal(getGrad(X+1,Y+1),{rx-1,ry-1});
 
-		float n = linear_interpolate(nw, ne, rx); //cos_interpolate(rx));
-		float s = linear_interpolate(sw, se, rx); // cos_interpolate(rx));
+		float n = linear_interpolate(nw, ne, cos_interpolate(rx)); //cos_interpolate(rx));
+		float s = linear_interpolate(sw, se, cos_interpolate(rx)); // cos_interpolate(rx));
 
-		return linear_interpolate(n, s, ry); //cos_interpolate(ry));
+		return linear_interpolate(n, s, cos_interpolate(ry)); //cos_interpolate(ry));
 	}
 
 	float Noise::Stack(int nbAppel, float persistance, float frequence, float x, float y)

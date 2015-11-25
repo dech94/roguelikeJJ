@@ -31,12 +31,15 @@ void Map::setValue(int x, int y, float value)
 
 void Map::Compute()
 {
+	float x,y;
 	for(int i=0;i<m_width;i++)
 	{
+		x = static_cast<float>(i) / m_width;
 		for(int j=0;j<m_height;j++)
 		{
-			setValue(i, j, m_noise.Compute(10 * static_cast<float>(i) / m_width, 10 * static_cast<float>(j) / m_height));
-			//m_map.push_back(((m_noise.Stack(4,0.5,0.01,i,j))+1)/2);
+			y = static_cast<float>(j) / m_height;
+			//setValue(i, j, m_noise.Compute(x,y));
+			setValue(i, j, m_noise.Stack(8,0.5,1,x,y));
 			//printf("%f ",m_noise.Stack(30,0.5,0.1,i,j));
 		}
 	
