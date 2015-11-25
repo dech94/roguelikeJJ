@@ -15,10 +15,10 @@
 namespace local {
 	class Noise {
 	public:
-		explicit Noise();
+		explicit Noise(unsigned seed);
 		virtual ~Noise();
 		float Compute(float x, float y);
-		float Stack(int nbAppel, float persistance, float frequence, float x, float y);
+		float Stack(int nbAppel, float persistance, float x, float y);
 
 	private:
 		std::mt19937_64 engine;

@@ -2,13 +2,9 @@
 
 namespace local {
 
-	Noise::Noise()
+	Noise::Noise(unsigned seed)
 	{
 		//seed engine (en parametre du constr)
-		typedef std::chrono::high_resolution_clock myclock;
-		myclock::time_point beginning = myclock::now();
-		myclock::duration d = myclock::now() - beginning;
-		unsigned seed = d.count();
 		engine.seed(seed);
 
 		// generate gradients
@@ -62,19 +58,23 @@ namespace local {
 		return linear_interpolate(n, s, cos_interpolate(ry)); //cos_interpolate(ry));
 	}
 
-	float Noise::Stack(int nbAppel, float persistance, float frequence, float x, float y)
+	float Noise::Stack(int nbAppel, float persistance, float x, float y)
 	{
 		float res = 0;
-		float f = frequence;
-		float amplitude = 1;
+		float f = 2; // diversification du paysage
+		float amplitude = 2.7; //amplitude entre valeur min-max
 
 		for(int i=0; i < nbAppel; i++)
 		{
+			//On additionne le buit avec res
 			res+=Compute(x*f,y*f)*amplitude;
+
+			//On change de bruit
 			amplitude*=persistance;
 			f*=2;
 		}
 
+		//pour conserver nos valeurs entre -1 et 1
 		float limite_geo = (1 - persistance) / (1 - amplitude);
 
 		return res*limite_geo;

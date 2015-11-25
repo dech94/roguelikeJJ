@@ -11,11 +11,12 @@
 namespace local {
   class Map {
   public:
-	explicit Map(int width, int height);
+	explicit Map(int width, int height, unsigned seed);
 	virtual ~Map();
 	float getValue(int x, int y);
 	void setValue(int x, int y, float value);
 	void Compute();
+
 	sf::VertexArray Print();
 
 

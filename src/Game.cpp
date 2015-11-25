@@ -20,14 +20,15 @@
 #include <game/WindowSettings.h>
 #include <local/Noise.h>
 #include <local/Map.h>
+#include <chrono>
 
 int main (void)
 {
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 500;
-  static constexpr unsigned INITIAL_HEIGHT = 500;
+  static constexpr unsigned INITIAL_WIDTH = 720;
+  static constexpr unsigned INITIAL_HEIGHT = 480;
 
   game::WindowSettings settings(INITIAL_WIDTH, INITIAL_HEIGHT, "Game");
   game::WindowGeometry geometry(INITIAL_WIDTH, INITIAL_HEIGHT);
@@ -53,16 +54,16 @@ int main (void)
 
   game::EntityManager mainEntities;
 
+  //Random
+	typedef std::chrono::high_resolution_clock myclock;
+	myclock::time_point beginning = myclock::now();
+	myclock::duration d = myclock::now() - beginning;
+	unsigned seed = d.count();
   // map
 
-  local::Map map(INITIAL_WIDTH,INITIAL_HEIGHT);
+  local::Map map(INITIAL_WIDTH, INITIAL_HEIGHT, seed);
   map.Compute();
   sf::VertexArray pixel = map.Print();
-
-  //noise
-
-  local::Noise noise();
-
 
   // main loop
   game::Clock clock;
