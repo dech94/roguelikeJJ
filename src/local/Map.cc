@@ -63,29 +63,23 @@ sf::VertexArray Map::Print()
 			uint8_t alpha = 255;//*std::fabs(value);
 			if(value < -0.5)
 			{
-				r = 34;
-				g = 66;
-				b = 124;
-			}
-			else if(value < -0.2)
-			{
 				r = 0;
 				g = 127;
 				b = 255;
 			}
-			else if(value < -0.1)
+			else if(value < -0.4)
 			{
 				r = 116;
 				g = 208;
 				b = 241;
 			}
-			else if(value < 0)
+			else if(value < -0.2)
 			{
 				r = 254;
 				g = 227;
 				b = 71;
 			}
-			else if(value < 0.2)
+			else if(value < 0.15)
 			{
 				r = 58;
 				g = 137;
