@@ -19,7 +19,8 @@
 #include <game/WindowGeometry.h>
 #include <game/WindowSettings.h>
 #include <local/Noise.h>
-#include <local/Map.h>
+#include <local/Heightmap.h>
+#include <local/Tilemap.h>
 #include <chrono>
 
 int main (void)
@@ -27,8 +28,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 1378;
-  static constexpr unsigned INITIAL_HEIGHT = 738;
+  static constexpr unsigned INITIAL_WIDTH = 50;
+  static constexpr unsigned INITIAL_HEIGHT = 50;
 
   game::WindowSettings settings(INITIAL_WIDTH, INITIAL_HEIGHT, "Game");
   game::WindowGeometry geometry(INITIAL_WIDTH, INITIAL_HEIGHT);
@@ -61,12 +62,19 @@ int main (void)
 	unsigned seed = d.count();
   // map
 
-  local::Map map(INITIAL_WIDTH, INITIAL_HEIGHT, seed);
-  map.Compute();
-  sf::VertexArray pixel = map.Print();
+  local::Heightmap hmap(INITIAL_WIDTH, INITIAL_HEIGHT, seed);
+  hmap.Compute();
+  local::Tilemap tmap(hmap);
+  if (!tmap.load(sf::Vector2u(16,16)))
+  {
+  	return -1;
+  } 
+  
 
   // main loop
   game::Clock clock;
+  
+//  float lastRender = 0;
 
   while (window.isOpen()) {
     // input
@@ -97,17 +105,21 @@ int main (void)
     auto elapsed = clock.restart();
     auto dt = elapsed.asSeconds();
     mainEntities.update(dt);
+//	if (lastRender - clock.getElapsedTime.asSeconds() > 1/60)
+//	{
+//		lastRender=clock.getElapsedTime.asSeconds();
+		
+		// render
+    	window.clear();
+	
+	    mainEntities.render(window);
 
-    // render
-    window.clear();
+	    window.draw(tmap);
 
-    mainEntities.render(window);
+	    window.display();
 
-    window.draw(pixel);
-
-    window.display();
-
-    actions.reset();
+	    actions.reset();
+//	}
   }
 
   return 0;

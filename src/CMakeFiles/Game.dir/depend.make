@@ -23,8 +23,9 @@ CMakeFiles/Game.dir/Game.cpp.o: game/Singleton.h
 CMakeFiles/Game.dir/Game.cpp.o: game/Vector.h
 CMakeFiles/Game.dir/Game.cpp.o: game/WindowGeometry.h
 CMakeFiles/Game.dir/Game.cpp.o: game/WindowSettings.h
-CMakeFiles/Game.dir/Game.cpp.o: local/Map.h
+CMakeFiles/Game.dir/Game.cpp.o: local/Heightmap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Noise.h
+CMakeFiles/Game.dir/Game.cpp.o: local/Tilemap.h
 
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.cc
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.h
@@ -82,12 +83,18 @@ CMakeFiles/Game.dir/game/WindowGeometry.cc.o: game/WindowGeometry.h
 CMakeFiles/Game.dir/game/WindowSettings.cc.o: game/WindowSettings.cc
 CMakeFiles/Game.dir/game/WindowSettings.cc.o: game/WindowSettings.h
 
-CMakeFiles/Game.dir/local/Map.cc.o: local/Map.cc
-CMakeFiles/Game.dir/local/Map.cc.o: local/Map.h
-CMakeFiles/Game.dir/local/Map.cc.o: local/Noise.h
-CMakeFiles/Game.dir/local/Map.cc.o: game/Vector.h
+CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.cc
+CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.h
+CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Noise.h
+CMakeFiles/Game.dir/local/Heightmap.cc.o: game/Vector.h
 
 CMakeFiles/Game.dir/local/Noise.cc.o: local/Noise.cc
 CMakeFiles/Game.dir/local/Noise.cc.o: local/Noise.h
 CMakeFiles/Game.dir/local/Noise.cc.o: game/Vector.h
+
+CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Heightmap.h
+CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Noise.h
+CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Tilemap.cc
+CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Tilemap.h
+CMakeFiles/Game.dir/local/Tilemap.cc.o: game/Vector.h
 

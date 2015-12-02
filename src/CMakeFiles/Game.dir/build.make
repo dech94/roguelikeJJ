@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dech94/Documents/projetL3/roguelikeJJ/src
+CMAKE_SOURCE_DIR = /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dech94/Documents/projetL3/roguelikeJJ/src
+CMAKE_BINARY_DIR = /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Game.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Game.dir/flags.make
 
 CMakeFiles/Game.dir/game/AssetManager.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/AssetManager.cc.o: game/AssetManager.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/AssetManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/AssetManager.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/AssetManager.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/AssetManager.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/AssetManager.cc
 
 CMakeFiles/Game.dir/game/AssetManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/AssetManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/AssetManager.cc > CMakeFiles/Game.dir/game/AssetManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/AssetManager.cc > CMakeFiles/Game.dir/game/AssetManager.cc.i
 
 CMakeFiles/Game.dir/game/AssetManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/AssetManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/AssetManager.cc -o CMakeFiles/Game.dir/game/AssetManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/AssetManager.cc -o CMakeFiles/Game.dir/game/AssetManager.cc.s
 
 CMakeFiles/Game.dir/game/AssetManager.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/AssetManager.cc.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/Game.dir/game/AssetManager.cc.o.provides.build: CMakeFiles/Game.dir/g
 
 CMakeFiles/Game.dir/game/Clock.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Clock.cc.o: game/Clock.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Clock.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Clock.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Clock.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Clock.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Clock.cc
 
 CMakeFiles/Game.dir/game/Clock.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Clock.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Clock.cc > CMakeFiles/Game.dir/game/Clock.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Clock.cc > CMakeFiles/Game.dir/game/Clock.cc.i
 
 CMakeFiles/Game.dir/game/Clock.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Clock.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Clock.cc -o CMakeFiles/Game.dir/game/Clock.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Clock.cc -o CMakeFiles/Game.dir/game/Clock.cc.s
 
 CMakeFiles/Game.dir/game/Clock.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Clock.cc.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/Game.dir/game/Clock.cc.o.provides.build: CMakeFiles/Game.dir/game/Clo
 
 CMakeFiles/Game.dir/game/EventManager.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/EventManager.cc.o: game/EventManager.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/EventManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/EventManager.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EventManager.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/EventManager.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EventManager.cc
 
 CMakeFiles/Game.dir/game/EventManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/EventManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EventManager.cc > CMakeFiles/Game.dir/game/EventManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EventManager.cc > CMakeFiles/Game.dir/game/EventManager.cc.i
 
 CMakeFiles/Game.dir/game/EventManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/EventManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EventManager.cc -o CMakeFiles/Game.dir/game/EventManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EventManager.cc -o CMakeFiles/Game.dir/game/EventManager.cc.s
 
 CMakeFiles/Game.dir/game/EventManager.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/EventManager.cc.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/Game.dir/game/EventManager.cc.o.provides.build: CMakeFiles/Game.dir/g
 
 CMakeFiles/Game.dir/game/Log.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Log.cc.o: game/Log.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Log.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Log.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Log.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Log.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Log.cc
 
 CMakeFiles/Game.dir/game/Log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Log.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Log.cc > CMakeFiles/Game.dir/game/Log.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Log.cc > CMakeFiles/Game.dir/game/Log.cc.i
 
 CMakeFiles/Game.dir/game/Log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Log.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Log.cc -o CMakeFiles/Game.dir/game/Log.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Log.cc -o CMakeFiles/Game.dir/game/Log.cc.s
 
 CMakeFiles/Game.dir/game/Log.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Log.cc.o.requires
@@ -143,17 +143,17 @@ CMakeFiles/Game.dir/game/Log.cc.o.provides.build: CMakeFiles/Game.dir/game/Log.c
 
 CMakeFiles/Game.dir/game/Random.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Random.cc.o: game/Random.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Random.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Random.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Random.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Random.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Random.cc
 
 CMakeFiles/Game.dir/game/Random.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Random.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Random.cc > CMakeFiles/Game.dir/game/Random.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Random.cc > CMakeFiles/Game.dir/game/Random.cc.i
 
 CMakeFiles/Game.dir/game/Random.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Random.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Random.cc -o CMakeFiles/Game.dir/game/Random.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Random.cc -o CMakeFiles/Game.dir/game/Random.cc.s
 
 CMakeFiles/Game.dir/game/Random.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Random.cc.o.requires
@@ -166,17 +166,17 @@ CMakeFiles/Game.dir/game/Random.cc.o.provides.build: CMakeFiles/Game.dir/game/Ra
 
 CMakeFiles/Game.dir/game/Action.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Action.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Action.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Action.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Action.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Action.cc
 
 CMakeFiles/Game.dir/game/Action.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Action.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Action.cc > CMakeFiles/Game.dir/game/Action.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Action.cc > CMakeFiles/Game.dir/game/Action.cc.i
 
 CMakeFiles/Game.dir/game/Action.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Action.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Action.cc -o CMakeFiles/Game.dir/game/Action.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Action.cc -o CMakeFiles/Game.dir/game/Action.cc.s
 
 CMakeFiles/Game.dir/game/Action.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Action.cc.o.requires
@@ -189,17 +189,17 @@ CMakeFiles/Game.dir/game/Action.cc.o.provides.build: CMakeFiles/Game.dir/game/Ac
 
 CMakeFiles/Game.dir/game/Animation.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Animation.cc.o: game/Animation.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Animation.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Animation.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Animation.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Animation.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Animation.cc
 
 CMakeFiles/Game.dir/game/Animation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Animation.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Animation.cc > CMakeFiles/Game.dir/game/Animation.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Animation.cc > CMakeFiles/Game.dir/game/Animation.cc.i
 
 CMakeFiles/Game.dir/game/Animation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Animation.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Animation.cc -o CMakeFiles/Game.dir/game/Animation.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Animation.cc -o CMakeFiles/Game.dir/game/Animation.cc.s
 
 CMakeFiles/Game.dir/game/Animation.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Animation.cc.o.requires
@@ -212,17 +212,17 @@ CMakeFiles/Game.dir/game/Animation.cc.o.provides.build: CMakeFiles/Game.dir/game
 
 CMakeFiles/Game.dir/game/Camera.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Camera.cc.o: game/Camera.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Camera.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Camera.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Camera.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Camera.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Camera.cc
 
 CMakeFiles/Game.dir/game/Camera.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Camera.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Camera.cc > CMakeFiles/Game.dir/game/Camera.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Camera.cc > CMakeFiles/Game.dir/game/Camera.cc.i
 
 CMakeFiles/Game.dir/game/Camera.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Camera.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Camera.cc -o CMakeFiles/Game.dir/game/Camera.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Camera.cc -o CMakeFiles/Game.dir/game/Camera.cc.s
 
 CMakeFiles/Game.dir/game/Camera.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Camera.cc.o.requires
@@ -235,17 +235,17 @@ CMakeFiles/Game.dir/game/Camera.cc.o.provides.build: CMakeFiles/Game.dir/game/Ca
 
 CMakeFiles/Game.dir/game/Control.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Control.cc.o: game/Control.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Control.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Control.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Control.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Control.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Control.cc
 
 CMakeFiles/Game.dir/game/Control.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Control.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Control.cc > CMakeFiles/Game.dir/game/Control.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Control.cc > CMakeFiles/Game.dir/game/Control.cc.i
 
 CMakeFiles/Game.dir/game/Control.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Control.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Control.cc -o CMakeFiles/Game.dir/game/Control.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Control.cc -o CMakeFiles/Game.dir/game/Control.cc.s
 
 CMakeFiles/Game.dir/game/Control.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Control.cc.o.requires
@@ -258,17 +258,17 @@ CMakeFiles/Game.dir/game/Control.cc.o.provides.build: CMakeFiles/Game.dir/game/C
 
 CMakeFiles/Game.dir/game/Entity.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Entity.cc.o: game/Entity.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Entity.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Entity.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Entity.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Entity.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Entity.cc
 
 CMakeFiles/Game.dir/game/Entity.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Entity.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Entity.cc > CMakeFiles/Game.dir/game/Entity.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Entity.cc > CMakeFiles/Game.dir/game/Entity.cc.i
 
 CMakeFiles/Game.dir/game/Entity.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Entity.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Entity.cc -o CMakeFiles/Game.dir/game/Entity.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Entity.cc -o CMakeFiles/Game.dir/game/Entity.cc.s
 
 CMakeFiles/Game.dir/game/Entity.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Entity.cc.o.requires
@@ -281,17 +281,17 @@ CMakeFiles/Game.dir/game/Entity.cc.o.provides.build: CMakeFiles/Game.dir/game/En
 
 CMakeFiles/Game.dir/game/EntityManager.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/EntityManager.cc.o: game/EntityManager.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/EntityManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/EntityManager.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EntityManager.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/EntityManager.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EntityManager.cc
 
 CMakeFiles/Game.dir/game/EntityManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/EntityManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EntityManager.cc > CMakeFiles/Game.dir/game/EntityManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EntityManager.cc > CMakeFiles/Game.dir/game/EntityManager.cc.i
 
 CMakeFiles/Game.dir/game/EntityManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/EntityManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/EntityManager.cc -o CMakeFiles/Game.dir/game/EntityManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/EntityManager.cc -o CMakeFiles/Game.dir/game/EntityManager.cc.s
 
 CMakeFiles/Game.dir/game/EntityManager.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/EntityManager.cc.o.requires
@@ -304,17 +304,17 @@ CMakeFiles/Game.dir/game/EntityManager.cc.o.provides.build: CMakeFiles/Game.dir/
 
 CMakeFiles/Game.dir/game/ResourceManager.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/ResourceManager.cc.o: game/ResourceManager.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/ResourceManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/ResourceManager.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ResourceManager.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/ResourceManager.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ResourceManager.cc
 
 CMakeFiles/Game.dir/game/ResourceManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/ResourceManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ResourceManager.cc > CMakeFiles/Game.dir/game/ResourceManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ResourceManager.cc > CMakeFiles/Game.dir/game/ResourceManager.cc.i
 
 CMakeFiles/Game.dir/game/ResourceManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/ResourceManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ResourceManager.cc -o CMakeFiles/Game.dir/game/ResourceManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ResourceManager.cc -o CMakeFiles/Game.dir/game/ResourceManager.cc.s
 
 CMakeFiles/Game.dir/game/ResourceManager.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/ResourceManager.cc.o.requires
@@ -327,17 +327,17 @@ CMakeFiles/Game.dir/game/ResourceManager.cc.o.provides.build: CMakeFiles/Game.di
 
 CMakeFiles/Game.dir/game/WindowGeometry.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/WindowGeometry.cc.o: game/WindowGeometry.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/WindowGeometry.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/WindowGeometry.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowGeometry.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/WindowGeometry.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowGeometry.cc
 
 CMakeFiles/Game.dir/game/WindowGeometry.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/WindowGeometry.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowGeometry.cc > CMakeFiles/Game.dir/game/WindowGeometry.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowGeometry.cc > CMakeFiles/Game.dir/game/WindowGeometry.cc.i
 
 CMakeFiles/Game.dir/game/WindowGeometry.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/WindowGeometry.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowGeometry.cc -o CMakeFiles/Game.dir/game/WindowGeometry.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowGeometry.cc -o CMakeFiles/Game.dir/game/WindowGeometry.cc.s
 
 CMakeFiles/Game.dir/game/WindowGeometry.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/WindowGeometry.cc.o.requires
@@ -350,17 +350,17 @@ CMakeFiles/Game.dir/game/WindowGeometry.cc.o.provides.build: CMakeFiles/Game.dir
 
 CMakeFiles/Game.dir/game/WindowSettings.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/WindowSettings.cc.o: game/WindowSettings.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/WindowSettings.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/WindowSettings.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowSettings.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/WindowSettings.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowSettings.cc
 
 CMakeFiles/Game.dir/game/WindowSettings.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/WindowSettings.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowSettings.cc > CMakeFiles/Game.dir/game/WindowSettings.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowSettings.cc > CMakeFiles/Game.dir/game/WindowSettings.cc.i
 
 CMakeFiles/Game.dir/game/WindowSettings.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/WindowSettings.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/WindowSettings.cc -o CMakeFiles/Game.dir/game/WindowSettings.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/WindowSettings.cc -o CMakeFiles/Game.dir/game/WindowSettings.cc.s
 
 CMakeFiles/Game.dir/game/WindowSettings.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/WindowSettings.cc.o.requires
@@ -373,17 +373,17 @@ CMakeFiles/Game.dir/game/WindowSettings.cc.o.provides.build: CMakeFiles/Game.dir
 
 CMakeFiles/Game.dir/game/Model.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/Model.cc.o: game/Model.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/Model.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Model.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Model.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/Model.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Model.cc
 
 CMakeFiles/Game.dir/game/Model.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/Model.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Model.cc > CMakeFiles/Game.dir/game/Model.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Model.cc > CMakeFiles/Game.dir/game/Model.cc.i
 
 CMakeFiles/Game.dir/game/Model.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/Model.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/Model.cc -o CMakeFiles/Game.dir/game/Model.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/Model.cc -o CMakeFiles/Game.dir/game/Model.cc.s
 
 CMakeFiles/Game.dir/game/Model.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/Model.cc.o.requires
@@ -396,17 +396,17 @@ CMakeFiles/Game.dir/game/Model.cc.o.provides.build: CMakeFiles/Game.dir/game/Mod
 
 CMakeFiles/Game.dir/game/ModelManager.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/game/ModelManager.cc.o: game/ModelManager.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/game/ModelManager.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/ModelManager.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ModelManager.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/game/ModelManager.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ModelManager.cc
 
 CMakeFiles/Game.dir/game/ModelManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/game/ModelManager.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ModelManager.cc > CMakeFiles/Game.dir/game/ModelManager.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ModelManager.cc > CMakeFiles/Game.dir/game/ModelManager.cc.i
 
 CMakeFiles/Game.dir/game/ModelManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/game/ModelManager.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/game/ModelManager.cc -o CMakeFiles/Game.dir/game/ModelManager.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/game/ModelManager.cc -o CMakeFiles/Game.dir/game/ModelManager.cc.s
 
 CMakeFiles/Game.dir/game/ModelManager.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/game/ModelManager.cc.o.requires
@@ -419,17 +419,17 @@ CMakeFiles/Game.dir/game/ModelManager.cc.o.provides.build: CMakeFiles/Game.dir/g
 
 CMakeFiles/Game.dir/local/Noise.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/local/Noise.cc.o: local/Noise.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Noise.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Noise.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Noise.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Noise.cc
 
 CMakeFiles/Game.dir/local/Noise.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Noise.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.cc > CMakeFiles/Game.dir/local/Noise.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Noise.cc > CMakeFiles/Game.dir/local/Noise.cc.i
 
 CMakeFiles/Game.dir/local/Noise.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Noise.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.cc -o CMakeFiles/Game.dir/local/Noise.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Noise.cc -o CMakeFiles/Game.dir/local/Noise.cc.s
 
 CMakeFiles/Game.dir/local/Noise.cc.o.requires:
 .PHONY : CMakeFiles/Game.dir/local/Noise.cc.o.requires
@@ -440,42 +440,65 @@ CMakeFiles/Game.dir/local/Noise.cc.o.provides: CMakeFiles/Game.dir/local/Noise.c
 
 CMakeFiles/Game.dir/local/Noise.cc.o.provides.build: CMakeFiles/Game.dir/local/Noise.cc.o
 
-CMakeFiles/Game.dir/local/Map.cc.o: CMakeFiles/Game.dir/flags.make
-CMakeFiles/Game.dir/local/Map.cc.o: local/Map.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Map.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Map.cc.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.cc
+CMakeFiles/Game.dir/local/Heightmap.cc.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_18)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Heightmap.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Heightmap.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Heightmap.cc
 
-CMakeFiles/Game.dir/local/Map.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Map.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.cc > CMakeFiles/Game.dir/local/Map.cc.i
+CMakeFiles/Game.dir/local/Heightmap.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Heightmap.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Heightmap.cc > CMakeFiles/Game.dir/local/Heightmap.cc.i
 
-CMakeFiles/Game.dir/local/Map.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Map.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/local/Map.cc -o CMakeFiles/Game.dir/local/Map.cc.s
+CMakeFiles/Game.dir/local/Heightmap.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Heightmap.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Heightmap.cc -o CMakeFiles/Game.dir/local/Heightmap.cc.s
 
-CMakeFiles/Game.dir/local/Map.cc.o.requires:
-.PHONY : CMakeFiles/Game.dir/local/Map.cc.o.requires
+CMakeFiles/Game.dir/local/Heightmap.cc.o.requires:
+.PHONY : CMakeFiles/Game.dir/local/Heightmap.cc.o.requires
 
-CMakeFiles/Game.dir/local/Map.cc.o.provides: CMakeFiles/Game.dir/local/Map.cc.o.requires
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Map.cc.o.provides.build
-.PHONY : CMakeFiles/Game.dir/local/Map.cc.o.provides
+CMakeFiles/Game.dir/local/Heightmap.cc.o.provides: CMakeFiles/Game.dir/local/Heightmap.cc.o.requires
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Heightmap.cc.o.provides.build
+.PHONY : CMakeFiles/Game.dir/local/Heightmap.cc.o.provides
 
-CMakeFiles/Game.dir/local/Map.cc.o.provides.build: CMakeFiles/Game.dir/local/Map.cc.o
+CMakeFiles/Game.dir/local/Heightmap.cc.o.provides.build: CMakeFiles/Game.dir/local/Heightmap.cc.o
+
+CMakeFiles/Game.dir/local/Tilemap.cc.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Tilemap.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_19)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Tilemap.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Tilemap.cc.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.cc
+
+CMakeFiles/Game.dir/local/Tilemap.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Tilemap.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.cc > CMakeFiles/Game.dir/local/Tilemap.cc.i
+
+CMakeFiles/Game.dir/local/Tilemap.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Tilemap.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.cc -o CMakeFiles/Game.dir/local/Tilemap.cc.s
+
+CMakeFiles/Game.dir/local/Tilemap.cc.o.requires:
+.PHONY : CMakeFiles/Game.dir/local/Tilemap.cc.o.requires
+
+CMakeFiles/Game.dir/local/Tilemap.cc.o.provides: CMakeFiles/Game.dir/local/Tilemap.cc.o.requires
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Tilemap.cc.o.provides.build
+.PHONY : CMakeFiles/Game.dir/local/Tilemap.cc.o.provides
+
+CMakeFiles/Game.dir/local/Tilemap.cc.o.provides.build: CMakeFiles/Game.dir/local/Tilemap.cc.o
 
 CMakeFiles/Game.dir/Game.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Game.cpp.o: Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/Game.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/Game.cpp.o -c /home/dech94/Documents/projetL3/roguelikeJJ/src/Game.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/Game.cpp.o -c /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/Game.cpp
 
 CMakeFiles/Game.dir/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/Game.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/projetL3/roguelikeJJ/src/Game.cpp > CMakeFiles/Game.dir/Game.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/Game.cpp > CMakeFiles/Game.dir/Game.cpp.i
 
 CMakeFiles/Game.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/Game.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/projetL3/roguelikeJJ/src/Game.cpp -o CMakeFiles/Game.dir/Game.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/Game.cpp -o CMakeFiles/Game.dir/Game.cpp.s
 
 CMakeFiles/Game.dir/Game.cpp.o.requires:
 .PHONY : CMakeFiles/Game.dir/Game.cpp.o.requires
@@ -505,7 +528,8 @@ Game_OBJECTS = \
 "CMakeFiles/Game.dir/game/Model.cc.o" \
 "CMakeFiles/Game.dir/game/ModelManager.cc.o" \
 "CMakeFiles/Game.dir/local/Noise.cc.o" \
-"CMakeFiles/Game.dir/local/Map.cc.o" \
+"CMakeFiles/Game.dir/local/Heightmap.cc.o" \
+"CMakeFiles/Game.dir/local/Tilemap.cc.o" \
 "CMakeFiles/Game.dir/Game.cpp.o"
 
 # External object files for target Game
@@ -528,7 +552,8 @@ Game: CMakeFiles/Game.dir/game/WindowSettings.cc.o
 Game: CMakeFiles/Game.dir/game/Model.cc.o
 Game: CMakeFiles/Game.dir/game/ModelManager.cc.o
 Game: CMakeFiles/Game.dir/local/Noise.cc.o
-Game: CMakeFiles/Game.dir/local/Map.cc.o
+Game: CMakeFiles/Game.dir/local/Heightmap.cc.o
+Game: CMakeFiles/Game.dir/local/Tilemap.cc.o
 Game: CMakeFiles/Game.dir/Game.cpp.o
 Game: CMakeFiles/Game.dir/build.make
 Game: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -558,7 +583,8 @@ CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/game/WindowSettings.cc.o.requi
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/game/Model.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/game/ModelManager.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Noise.cc.o.requires
-CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Map.cc.o.requires
+CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Heightmap.cc.o.requires
+CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Tilemap.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/Game.cpp.o.requires
 .PHONY : CMakeFiles/Game.dir/requires
 
@@ -567,6 +593,6 @@ CMakeFiles/Game.dir/clean:
 .PHONY : CMakeFiles/Game.dir/clean
 
 CMakeFiles/Game.dir/depend:
-	cd /home/dech94/Documents/projetL3/roguelikeJJ/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dech94/Documents/projetL3/roguelikeJJ/src /home/dech94/Documents/projetL3/roguelikeJJ/src /home/dech94/Documents/projetL3/roguelikeJJ/src /home/dech94/Documents/projetL3/roguelikeJJ/src /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles/Game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src /home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/CMakeFiles/Game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Game.dir/depend
 
