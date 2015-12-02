@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Heightmap.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Heightmap.h
 stdlib.h
 -
 stdio.h
@@ -16,9 +16,9 @@ vector
 SFML/Graphics.hpp
 -
 Noise.h
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Noise.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.h
 
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Noise.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Noise.h
 stdlib.h
 -
 stdio.h
@@ -40,11 +40,11 @@ cassert
 chrono
 -
 
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.cc
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Tilemap.cc
 Tilemap.h
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Tilemap.h
 
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Tilemap.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Tilemap.h
 stdlib.h
 -
 stdio.h
@@ -56,7 +56,7 @@ string
 SFML/Graphics.hpp
 -
 Heightmap.h
-/home/jeremy/Documents/CoursL3/ProjetRoguelike/git/roguelikeJJ/src/local/Heightmap.h
+/home/dech94/Documents/projetL3/roguelikeJJ/src/local/Heightmap.h
 
 game/Vector.h
 cmath

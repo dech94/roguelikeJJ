@@ -65,7 +65,7 @@ int main (void)
   local::Heightmap hmap(INITIAL_WIDTH, INITIAL_HEIGHT, seed);
   hmap.Compute();
   local::Tilemap tmap(hmap);
-  if (!tmap.load(sf::Vector2u(32,32)))
+  if (!tmap.load(sf::Vector2u(16,16)))
   {
   	return -1;
   } 
