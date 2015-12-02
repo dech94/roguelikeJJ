@@ -41,7 +41,7 @@ add_executable(Game
   game/ModelManager.cc
   #perlin
   local/Noise.cc
-  local/Map.cc
+  local/Heightmap.cc
   #game
   Game.cpp
 )
