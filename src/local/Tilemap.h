@@ -23,10 +23,7 @@ namespace local
 			local::Heightmap m_heightmap;
 			sf::VertexArray m_tilemap;
 			
-			int convert(float value)
-			{
-				return 10;
-			}
+			int convert(float value);
 			
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 			{
