@@ -28,8 +28,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 100;
-  static constexpr unsigned INITIAL_HEIGHT = 100;
+  static constexpr unsigned INITIAL_WIDTH = 2048;
+  static constexpr unsigned INITIAL_HEIGHT = 2048;
 
   game::WindowSettings settings( 1024, 1024, "Game");
   game::WindowGeometry geometry( 1024, 1024);
@@ -130,20 +130,34 @@ int main (void)
       event.size.height = sz.y;
       geometry.update(event);
     }
+    
+        // Check move of view
+    if (moveUP.isActive()) {
+      gameView.move(0,-32);
+    }
+    if (moveDown.isActive()) {
+      gameView.move(0,32);
+    }
+    if (moveLeft.isActive()) {
+      gameView.move(-32,0);
+    }
+    if (moveRight.isActive()) {
+      gameView.move(32,0);
+    }
 
     // update
     auto elapsed = clock.restart();
     auto dt = elapsed.asSeconds();
     mainEntities.update(dt);
-    	//window.clear();
+    	window.clear();
 	
+		
+	    window.draw(tmap);
+	    
 	    mainEntities.render(window);
 
-	    window.draw(tmap);
-
-
 	    window.setView(gameView);
-	    window.setView(minimapView);
+	    //window.setView(minimapView);
 
 	    window.display();
 
