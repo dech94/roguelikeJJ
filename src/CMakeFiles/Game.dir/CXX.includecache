@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dech94/Documents/projetL3/roguelikeJJ/src/Game.cpp
+/home/dech94/Documents/roguelikeJJ/src/Game.cpp
 game/Action.h
 -
 game/Animation.h
@@ -53,7 +53,23 @@ local/Heightmap.h
 -
 local/Tilemap.h
 -
+local/Character.h
+-
 chrono
+-
+
+/home/dech94/Documents/roguelikeJJ/src/local/Character.cc
+Character.h
+/home/dech94/Documents/roguelikeJJ/src/local/Character.h
+
+/home/dech94/Documents/roguelikeJJ/src/local/Character.h
+game/Entity.h
+-
+game/EventManager.h
+-
+game/ResourceManager.h
+-
+SFML/Graphics.hpp
 -
 
 game/Action.h
@@ -188,6 +204,16 @@ game/WindowSettings.h
 string
 -
 SFML/Window.hpp
+-
+
+local/Character.h
+game/Entity.h
+-
+game/EventManager.h
+-
+game/ResourceManager.h
+-
+SFML/Graphics.hpp
 -
 
 local/Heightmap.h

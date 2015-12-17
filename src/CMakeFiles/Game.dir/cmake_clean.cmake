@@ -18,6 +18,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Game.dir/local/Noise.cc.o"
   "CMakeFiles/Game.dir/local/Heightmap.cc.o"
   "CMakeFiles/Game.dir/local/Tilemap.cc.o"
+  "CMakeFiles/Game.dir/local/Character.cc.o"
   "CMakeFiles/Game.dir/Game.cpp.o"
   "Game.pdb"
   "Game"

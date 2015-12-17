@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dech94/Documents/projetL3/roguelikeJJ/src
+CMAKE_SOURCE_DIR = /home/dech94/Documents/roguelikeJJ/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dech94/Documents/projetL3/roguelikeJJ/src
+CMAKE_BINARY_DIR = /home/dech94/Documents/roguelikeJJ/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dech94/Documents/roguelikeJJ/src/CMakeFiles /home/dech94/Documents/roguelikeJJ/src/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dech94/Documents/projetL3/roguelikeJJ/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dech94/Documents/roguelikeJJ/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -519,6 +519,30 @@ game/WindowSettings.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/WindowSettings.cc.s
 .PHONY : game/WindowSettings.cc.s
 
+local/Character.o: local/Character.cc.o
+.PHONY : local/Character.o
+
+# target to build an object file
+local/Character.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.o
+.PHONY : local/Character.cc.o
+
+local/Character.i: local/Character.cc.i
+.PHONY : local/Character.i
+
+# target to preprocess a source file
+local/Character.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.i
+.PHONY : local/Character.cc.i
+
+local/Character.s: local/Character.cc.s
+.PHONY : local/Character.s
+
+# target to generate assembly for a file
+local/Character.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.s
+.PHONY : local/Character.cc.s
+
 local/Heightmap.o: local/Heightmap.cc.o
 .PHONY : local/Heightmap.o
 
@@ -651,6 +675,9 @@ help:
 	@echo "... game/WindowSettings.o"
 	@echo "... game/WindowSettings.i"
 	@echo "... game/WindowSettings.s"
+	@echo "... local/Character.o"
+	@echo "... local/Character.i"
+	@echo "... local/Character.s"
 	@echo "... local/Heightmap.o"
 	@echo "... local/Heightmap.i"
 	@echo "... local/Heightmap.s"

@@ -43,6 +43,7 @@ add_executable(Game
   local/Noise.cc
   local/Heightmap.cc
   local/Tilemap.cc
+  local/Character.cc
   #game
   Game.cpp
 )

@@ -21,6 +21,7 @@
 #include <local/Noise.h>
 #include <local/Heightmap.h>
 #include <local/Tilemap.h>
+#include <local/Character.h>
 #include <chrono>
 
 int main (void)
@@ -28,8 +29,11 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 2048;
-  static constexpr unsigned INITIAL_HEIGHT = 2048;
+  static constexpr unsigned INITIAL_WIDTH = 50;
+  static constexpr unsigned INITIAL_HEIGHT = 50;
+
+  sf::ContextSettings _settings;
+  _settings.antialiasingLevel = 8;
 
   game::WindowSettings settings( 1024, 1024, "Game");
   game::WindowGeometry geometry( 1024, 1024);
@@ -39,6 +43,10 @@ int main (void)
   window.setKeyRepeatEnabled(false);
   
   //add view
+  int posCamX = INITIAL_WIDTH*32/2;
+  int posCamY = INITIAL_HEIGHT*32/2;
+  int nextX = INITIAL_WIDTH*32/2;
+  int nextY = INITIAL_HEIGHT*32/2;
   sf::View gameView(sf::Vector2f(INITIAL_WIDTH*32/2, INITIAL_HEIGHT*32/2), sf::Vector2f(1024, 1024));
   sf::View minimapView(sf::Vector2f(INITIAL_WIDTH*32/2, INITIAL_HEIGHT*32/2), sf::Vector2f(100*32, 100*32));
   //view.zoom(0.1f);
@@ -99,7 +107,9 @@ int main (void)
   {
   	return -1;
   } 
-  
+
+  //Character
+  local::Character perso(posCamX, posCamY);
 
   // main loop
   game::Clock clock;
@@ -133,17 +143,47 @@ int main (void)
     
         // Check move of view
     if (moveUP.isActive()) {
-      gameView.move(0,-32);
+	nextY-=4;
+	if (nextY > 4)
+	{
+     		gameView.move(0,-4);
+     		posCamY-=4;
+     		nextY=posCamY;
+		perso.setPosition(posCamX,posCamY);
+	}
     }
     if (moveDown.isActive()) {
-      gameView.move(0,32);
+	nextY+=4;
+	if (nextY < INITIAL_HEIGHT*32 - 32)
+	{  
+		gameView.move(0,4);
+		posCamY+=4;
+		nextY=posCamY;
+		perso.setPosition(posCamX,posCamY);
+    	}
     }
     if (moveLeft.isActive()) {
-      gameView.move(-32,0);
+	nextX-=4;
+	if (nextX > 4)
+	{
+		gameView.move(-4,0);
+		posCamX-=4;
+		nextX=posCamX;
+		perso.setPosition(posCamX,posCamY);
+	}
     }
     if (moveRight.isActive()) {
-      gameView.move(32,0);
+	nextX+=4;
+	if (nextX < INITIAL_WIDTH*32 - 32)
+	{
+		gameView.move(4,0);
+	     	posCamX+=4;
+	     	nextX=posCamX;
+		perso.setPosition(posCamX,posCamY);
+	}
     }
+
+	
 
     // update
     auto elapsed = clock.restart();
@@ -153,6 +193,8 @@ int main (void)
 	
 		
 	    window.draw(tmap);
+
+	    window.draw(perso);
 	    
 	    mainEntities.render(window);
 
