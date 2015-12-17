@@ -23,17 +23,15 @@
 #include <local/Tilemap.h>
 #include <local/Character.h>
 #include <chrono>
+#include <stdio.h>
 
 int main (void)
 {
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static constexpr unsigned INITIAL_WIDTH = 50;
-  static constexpr unsigned INITIAL_HEIGHT = 50;
-
-  sf::ContextSettings _settings;
-  _settings.antialiasingLevel = 8;
+  static const int HMAP_WIDTH = 500;
+  static const int HMAP_HEIGHT = 500;
 
   game::WindowSettings settings( 1024, 1024, "Game");
   game::WindowGeometry geometry( 1024, 1024);
@@ -43,12 +41,10 @@ int main (void)
   window.setKeyRepeatEnabled(false);
   
   //add view
-  int posCamX = INITIAL_WIDTH*32/2;
-  int posCamY = INITIAL_HEIGHT*32/2;
-  int nextX = INITIAL_WIDTH*32/2;
-  int nextY = INITIAL_HEIGHT*32/2;
-  sf::View gameView(sf::Vector2f(INITIAL_WIDTH*32/2, INITIAL_HEIGHT*32/2), sf::Vector2f(1024, 1024));
-  sf::View minimapView(sf::Vector2f(INITIAL_WIDTH*32/2, INITIAL_HEIGHT*32/2), sf::Vector2f(100*32, 100*32));
+  int posCamX = HMAP_WIDTH*32/2;
+  int posCamY = HMAP_HEIGHT*32/2;
+  sf::View gameView(sf::Vector2f(HMAP_WIDTH*32/2, HMAP_HEIGHT*32/2), sf::Vector2f(1024, 1024));
+  sf::View minimapView(sf::Vector2f(HMAP_WIDTH*32/2, HMAP_HEIGHT*32/2), sf::Vector2f(100*32, 100*32));
   //view.zoom(0.1f);
   // la vue de jeu (toute la fenêtre)
 	gameView.setViewport(sf::FloatRect(0, 0, 1, 1));
@@ -88,6 +84,14 @@ int main (void)
   moveRight.setContinuous();
   actions.addAction(moveRight);
 
+  game::Action getPosition("Get Position");
+  getPosition.addKeyControl(sf::Keyboard::R);
+  getPosition.setContinuous();
+  actions.addAction(getPosition);
+
+
+
+
   // Events manager 
   game::EventManager events;
 
@@ -100,7 +104,7 @@ int main (void)
 	unsigned seed = d.count();
   // map
 
-  local::Heightmap hmap(INITIAL_WIDTH, INITIAL_HEIGHT, seed);
+  local::Heightmap hmap(HMAP_WIDTH, HMAP_HEIGHT, seed);
   hmap.Compute();
   local::Tilemap tmap(hmap);
   if (!tmap.load(sf::Vector2u(32,32)))
@@ -142,48 +146,27 @@ int main (void)
     }
     
         // Check move of view
-    if (moveUP.isActive()) {
-	nextY-=4;
-	if (nextY > 4)
-	{
-     		gameView.move(0,-4);
-     		posCamY-=4;
-     		nextY=posCamY;
-		perso.setPosition(posCamX,posCamY);
+	if (moveUP.isActive()) {
+		perso.move(0);
 	}
-    }
-    if (moveDown.isActive()) {
-	nextY+=4;
-	if (nextY < INITIAL_HEIGHT*32 - 32)
-	{  
-		gameView.move(0,4);
-		posCamY+=4;
-		nextY=posCamY;
-		perso.setPosition(posCamX,posCamY);
-    	}
-    }
-    if (moveLeft.isActive()) {
-	nextX-=4;
-	if (nextX > 4)
-	{
-		gameView.move(-4,0);
-		posCamX-=4;
-		nextX=posCamX;
-		perso.setPosition(posCamX,posCamY);
+	if (moveDown.isActive()) {
+		perso.move(1);
 	}
-    }
-    if (moveRight.isActive()) {
-	nextX+=4;
-	if (nextX < INITIAL_WIDTH*32 - 32)
-	{
-		gameView.move(4,0);
-	     	posCamX+=4;
-	     	nextX=posCamX;
-		perso.setPosition(posCamX,posCamY);
+	if (moveLeft.isActive()) {
+		perso.move(2);
 	}
-    }
+	if (moveRight.isActive()) {
+		perso.move(3);
+	}
 
-	
+	if (getPosition.isActive()) {
+//		sf::Vector2f curPos = perso.getPosition();
+		printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
+	}
+
+	gameView.setCenter(perso.getPosition());
+
+	tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 
     // update
     auto elapsed = clock.restart();

@@ -16,17 +16,14 @@ namespace local
 			explicit Tilemap(local::Heightmap heightmap);
 			virtual ~Tilemap();
 			bool load(sf::Vector2u tileSize);
-			
+			void Tilemap::update(sf::Vector2u tileSize, int x, int y);
 		
 		private:
 			sf::Texture m_tileset;
 			local::Heightmap m_heightmap;
 			sf::VertexArray m_tilemap;
 			
-			int convert(float value)
-			{
-				return 9;
-			}
+			int convert(float value);
 			
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 			{

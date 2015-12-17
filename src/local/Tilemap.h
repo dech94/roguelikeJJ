@@ -16,7 +16,7 @@ namespace local
 			explicit Tilemap(local::Heightmap heightmap);
 			virtual ~Tilemap();
 			bool load(sf::Vector2u tileSize);
-			
+			void update(sf::Vector2u tileSize, int x, int y);
 		
 		private:
 			sf::Texture m_tileset;
