@@ -349,6 +349,8 @@ vector
 -
 string
 -
+cmath
+-
 SFML/Graphics.hpp
 -
 Heightmap.h
@@ -540,6 +542,8 @@ stdio.h
 vector
 -
 string
+-
+cmath
 -
 SFML/Graphics.hpp
 -

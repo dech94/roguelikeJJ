@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 #include "Heightmap.h"
 

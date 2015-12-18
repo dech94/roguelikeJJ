@@ -20,11 +20,9 @@ namespace local
 		{
 			return false;
 		}
+		m_tilemap.setPrimitiveType(sf::Quads);
 
-				m_tilemap.setPrimitiveType(sf::Quads);
-		int size = m_heightmap.getHeight()*m_heightmap.getWidth()*4;
-		m_tilemap.resize(size);
-
+		/**
 		//On remplit le tableau de vertex avec des quad
 		for (int i = 0; i < m_heightmap.getWidth(); i ++)
 		{
@@ -52,22 +50,24 @@ namespace local
 				quad[2].texCoords = sf::Vector2f((posX+1)*tileSize.x, (posY+1)*tileSize.y);
 				quad[3].texCoords = sf::Vector2f(posX*tileSize.x, (posY+1)*tileSize.y);
 			}
-		}
+		}*/
 		return true;
 	}
 	
 	void Tilemap::update(sf::Vector2u tileSize, int x, int y)
 	{
-		m_tileset.loadFromFile("tile.png");
-		m_tilemap.setPrimitiveType(sf::Quads);
-		int size = 100*100*4;
+		
+		x=floor(x/32);
+		y=floor(y/32);
+		printf("%d, %d\n",x,y);
+		int marge = 5;
+		int size = m_heightmap.getHeight()*m_heightmap.getWidth()*4;
 		m_tilemap.resize(size);
-		int tileX = x / 32;
-		int tileY = y / 32;
+
 		//On remplit le tableau de vertex avec des quad
-		for (int i = (tileX - 50); i < (tileX +50); i ++)
+		for (int i = x-marge; i < x+marge+1; i ++)
 		{
-			for (int j = (tileY - 50); j < (tileY +50); j ++)
+			for (int j = y-marge; j < y+marge+1; j ++)
 			{
 				float value = m_heightmap.getValue(i,j);
 			
@@ -77,7 +77,7 @@ namespace local
 				int posY = tileNum / (m_tileset.getSize().x/tileSize.x);
 			
 				//on récupère un pointeur vers le quad courant
-				sf::Vertex* quad= &m_tilemap[(i+j*100)*4];
+				sf::Vertex* quad= &m_tilemap[(i+j*m_heightmap.getWidth())*4];
 			
 				//on définit la position pour chacun des coins du quad
 				quad[0].position = sf::Vector2f(i*tileSize.x, j*tileSize.y);
@@ -90,9 +90,9 @@ namespace local
 				quad[1].texCoords = sf::Vector2f((posX+1)*tileSize.x, posY*tileSize.y);
 				quad[2].texCoords = sf::Vector2f((posX+1)*tileSize.x, (posY+1)*tileSize.y);
 				quad[3].texCoords = sf::Vector2f(posX*tileSize.x, (posY+1)*tileSize.y);
-			}
-		}
 	}
+}
+}
 
 	int Tilemap::convert(float value){
 	

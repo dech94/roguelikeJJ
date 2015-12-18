@@ -166,7 +166,7 @@ int main (void)
 
 	gameView.setCenter(perso.getPosition());
 
-	//tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+	tmap.update(sf::Vector2u(32,32), perso.getPosition().x/32, perso.getPosition().y/32);
 
     // update
     auto elapsed = clock.restart();
