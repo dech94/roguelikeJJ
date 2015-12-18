@@ -14,14 +14,15 @@ namespace local
 	class Tilemap : public sf::Drawable, public sf::Transformable
 	{
 		public:
-			explicit Tilemap(local::Heightmap heightmap);
+			explicit Tilemap(const local::Heightmap& heightmap);
 			virtual ~Tilemap();
 			bool load(sf::Vector2u tileSize);
 			void update(sf::Vector2u tileSize, int x, int y);
+			void cleanTile();
 		
 		private:
 			sf::Texture m_tileset;
-			local::Heightmap m_heightmap;
+			const local::Heightmap& m_heightmap;
 			sf::VertexArray m_tilemap;
 			
 			int convert(float value);

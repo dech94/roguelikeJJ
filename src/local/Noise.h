@@ -9,7 +9,7 @@
 #include <random>
 #include <cmath>
 #include <cassert>
-#include <../game/Vector.h>
+#include <game/Vector.h>
 #include <chrono>
 
 namespace local {

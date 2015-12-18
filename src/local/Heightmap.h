@@ -13,11 +13,11 @@ namespace local {
   public:
 	explicit Heightmap(int width, int height, unsigned seed);
 	virtual ~Heightmap();
-	float getValue(int x, int y);
+	float getValue(int x, int y) const;
 	void setValue(int x, int y, float value);
 	void Compute();
-	int getWidth();
-	int getHeight();
+	int getWidth() const;
+	int getHeight() const;
 	sf::VertexArray Print();
 
   private:

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 #include "Heightmap.h"
 
@@ -17,6 +18,7 @@ namespace local
 			virtual ~Tilemap();
 			bool load(sf::Vector2u tileSize);
 			void update(sf::Vector2u tileSize, int x, int y);
+			void cleanTile();
 		
 		private:
 			sf::Texture m_tileset;

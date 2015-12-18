@@ -17,7 +17,7 @@ Heightmap::~Heightmap()
 
 }
 
-float Heightmap::getValue(int x, int y)
+float Heightmap::getValue(int x, int y) const
 {
 	return m_map[y*m_width + x];
 
@@ -46,12 +46,12 @@ void Heightmap::Compute()
 	}
 }
 
-int Heightmap::getWidth()
+int Heightmap::getWidth() const
 {
 	return m_width;
 }
 
-int Heightmap::getHeight()
+int Heightmap::getHeight() const
 {
 	return m_height;
 }

@@ -24,6 +24,7 @@
 #include <local/Character.h>
 #include <chrono>
 #include <stdio.h>
+#include <cmath>
 
 int main (void)
 {
@@ -166,11 +167,13 @@ int main (void)
 
 	gameView.setCenter(perso.getPosition());
 
-	tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+
 
     // update
     auto elapsed = clock.restart();
     auto dt = elapsed.asSeconds();
+
+		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
     mainEntities.update(dt);
     	window.clear();
 	

@@ -2,7 +2,7 @@
 
 namespace local
 {
-	/*explicit*/ Tilemap::Tilemap(local::Heightmap heightmap)
+	/*explicit*/ Tilemap::Tilemap(const local::Heightmap& heightmap)
 	:m_heightmap(heightmap)
 	{
 	
@@ -13,6 +13,9 @@ namespace local
 
 	}
 
+static const int MARGE = 20;
+
+
 	bool Tilemap::load(sf::Vector2u tileSize)
 	{
 		//chargement des tiles
@@ -21,6 +24,10 @@ namespace local
 			return false;
 		}
 		m_tilemap.setPrimitiveType(sf::Quads);
+
+		// int size = m_heightmap.getHeight()*m_heightmap.getWidth()*4;
+		int size = (2 * MARGE + 1) * (2 * MARGE + 1) * 4;
+		m_tilemap.resize(size);
 
 		/**
 		//On remplit le tableau de vertex avec des quad
@@ -60,14 +67,15 @@ namespace local
 		x=floor(x/32);
 		y=floor(y/32);
 		printf("%d, %d\n",x,y);
-		int marge = 5;
-		int size = m_heightmap.getHeight()*m_heightmap.getWidth()*4;
-		m_tilemap.resize(size);
+//		int size = m_heightmap.getHeight()*m_heightmap.getWidth()*4;
+//		m_tilemap.resize(size);
+
+		std::size_t idx = 0;
 
 		//On remplit le tableau de vertex avec des quad
-		for (int i = x-marge; i < x+marge+1; i ++)
+		for (int i = x-MARGE; i < x+MARGE+1; i ++)
 		{
-			for (int j = y-marge; j < y+marge+1; j ++)
+			for (int j = y-MARGE; j < y+MARGE+1; j ++)
 			{
 				float value = m_heightmap.getValue(i,j);
 			
@@ -77,8 +85,8 @@ namespace local
 				int posY = tileNum / (m_tileset.getSize().x/tileSize.x);
 			
 				//on récupère un pointeur vers le quad courant
-				sf::Vertex* quad= &m_tilemap[(i+j*m_heightmap.getWidth())*4];
-			
+				sf::Vertex* quad= &m_tilemap[idx * 4];
+
 				//on définit la position pour chacun des coins du quad
 				quad[0].position = sf::Vector2f(i*tileSize.x, j*tileSize.y);
 				quad[1].position = sf::Vector2f((i+1)*tileSize.x, j*tileSize.y);
@@ -90,9 +98,17 @@ namespace local
 				quad[1].texCoords = sf::Vector2f((posX+1)*tileSize.x, posY*tileSize.y);
 				quad[2].texCoords = sf::Vector2f((posX+1)*tileSize.x, (posY+1)*tileSize.y);
 				quad[3].texCoords = sf::Vector2f(posX*tileSize.x, (posY+1)*tileSize.y);
+
+				idx++;
+			}
+		}
+
 	}
-}
-}
+
+	void Tilemap::cleanTile()
+	{
+		m_tilemap.clear();
+	}
 
 	int Tilemap::convert(float value){
 	
