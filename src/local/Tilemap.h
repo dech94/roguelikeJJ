@@ -24,6 +24,7 @@ namespace local
 			sf::Texture m_tileset;
 			const local::Heightmap& m_heightmap;
 			sf::VertexArray m_tilemap;
+			static const int MARGE = 20;
 			
 			int convert(float value);
 			

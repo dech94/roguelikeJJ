@@ -2,7 +2,7 @@
 
 namespace local
 {
-	/*explicit*/ Tilemap::Tilemap(local::Heightmap heightmap)
+	/*explicit*/ Tilemap::Tilemap(const local::Heightmap& heightmap)
 	:m_heightmap(heightmap)
 	{
 	
@@ -12,9 +12,6 @@ namespace local
 	{
 
 	}
-
-static const int MARGE = 20;
-
 
 	bool Tilemap::load(sf::Vector2u tileSize)
 	{

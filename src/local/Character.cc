@@ -25,6 +25,7 @@ namespace local {
 
 	void Character::move(int dir)
 	{
+		//TODO variable marge=1000, récup dyna taille hmap
 		int nextX;
 		int nextY;
 		switch(dir)
