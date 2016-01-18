@@ -13,10 +13,10 @@ namespace local
 
 	}
 
-	bool Tilemap::load(sf::Vector2u tileSize)
+	bool Tilemap::load(sf::Vector2u tileSize, std::string tileset)
 	{
 		//chargement des tiles
-		if (!m_tileset.loadFromFile("tile.png"))
+		if (!m_tileset.loadFromFile(tileset))
 		{
 			return false;
 		}
@@ -80,7 +80,7 @@ namespace local
 	int Tilemap::convert(float value){
 	
 		int tile = 0;
-			if(value < -0.5)
+			/*if(value < -0.5)
 			{
 				tile = 0;
 			}
@@ -92,7 +92,7 @@ namespace local
 			{
 				tile = 2;
 			}
-			else if(value < 0.15)
+			else */if(value < 0.15)
 			{
 				tile = 3;
 			}

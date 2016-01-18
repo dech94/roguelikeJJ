@@ -44,6 +44,7 @@ add_executable(Game
   local/Heightmap.cc
   local/Tilemap.cc
   local/Character.cc
+  local/Obstaclemap.cc
   #game
   Game.cpp
 )

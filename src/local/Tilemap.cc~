@@ -13,10 +13,10 @@ namespace local
 
 	}
 
-	bool Tilemap::load(sf::Vector2u tileSize)
+	bool Tilemap::load(sf::Vector2u tileSize, std::string tileset)
 	{
 		//chargement des tiles
-		if (!m_tileset.loadFromFile("tile.png"))
+		if (!m_tileset.loadFromFile(tileset))
 		{
 			return false;
 		}
@@ -35,7 +35,8 @@ namespace local
 		x=floor(x/32);
 		y=floor(y/32);
 //		printf("%d, %d\n",x,y);
-
+		
+		//TODO vérifier le changement de tile 
 		std::size_t idx = 0;
 
 		//On remplit le tableau de vertex avec des quad

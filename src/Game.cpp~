@@ -21,6 +21,7 @@
 #include <local/Noise.h>
 #include <local/Heightmap.h>
 #include <local/Tilemap.h>
+#include <local/Obstaclemap.h>
 #include <local/Character.h>
 #include <chrono>
 #include <stdio.h>
@@ -108,7 +109,13 @@ int main (void)
   local::Heightmap hmap(HMAP_WIDTH, HMAP_HEIGHT, seed);
   hmap.Compute();
   local::Tilemap tmap(hmap);
-  if (!tmap.load(sf::Vector2u(32,32)))
+  local::Obstaclemap omap(hmap);
+  if (!tmap.load(sf::Vector2u(32,32), "tile.png"))
+  {
+  	return -1;
+  } 
+
+  if (!omap.load(sf::Vector2u(32,32), "map.png"))
   {
   	return -1;
   } 
@@ -145,19 +152,22 @@ int main (void)
       event.size.height = sz.y;
       geometry.update(event);
     }
-    
         // Check move of view
 	if (moveUP.isActive()) {
 		perso.move(0);
+		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveDown.isActive()) {
 		perso.move(1);
+		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveLeft.isActive()) {
 		perso.move(2);
+		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveRight.isActive()) {
 		perso.move(3);
+		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 
 	if (getPosition.isActive()) {
@@ -174,11 +184,13 @@ int main (void)
     auto dt = elapsed.asSeconds();
 
 		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
     mainEntities.update(dt);
     	window.clear();
 	
 		
 	    window.draw(tmap);
+	    window.draw(omap);
 
 	    window.draw(perso);
 	    
