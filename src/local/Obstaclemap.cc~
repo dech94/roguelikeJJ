@@ -3,7 +3,7 @@
 namespace local
 {
 	/*explicit*/ Obstaclemap::Obstaclemap(const local::Heightmap& heightmap)
-	:m_heightmap(heightmap)
+	:Tilemap(heightmap)
 	{
 	
 	}
@@ -15,7 +15,7 @@ namespace local
 
 	int Obstaclemap::convert(float value){
 	
-		int tile = 1;
+		int tile = 0;
 			if(value < -0.1)
 			{
 				tile = 0;
@@ -26,6 +26,11 @@ namespace local
 			}
 
 	return tile;
+	}
+
+	bool Obstaclemap::isReachable(int x, int y)
+	{
+		return false;
 	}
 }
 

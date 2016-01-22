@@ -32,8 +32,10 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static const int HMAP_WIDTH = 500;
-  static const int HMAP_HEIGHT = 500;
+  static const int HMAP_WIDTH = 200;
+  static const int HMAP_HEIGHT = 200;
+  static const int MARGEX = HMAP_WIDTH*32 - 1000;
+  static const int MARGEY = HMAP_HEIGHT*32 -1000;
 
   game::WindowSettings settings( 1024, 1024, "Game");
   game::WindowGeometry geometry( 1024, 1024);
@@ -122,7 +124,10 @@ int main (void)
 
   //Character
   local::Character perso(posCamX, posCamY);
-
+  if (!perso.load(sf::Vector2u(32,32), "perso.png"))
+  {
+  	return -1;
+  } 
   // main loop
   game::Clock clock;
   
@@ -154,24 +159,23 @@ int main (void)
     }
         // Check move of view
 	if (moveUP.isActive()) {
-		perso.move(0);
+		perso.move(0,MARGEX,MARGEY);
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveDown.isActive()) {
-		perso.move(1);
+		perso.move(1,MARGEX,MARGEY);
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveLeft.isActive()) {
-		perso.move(2);
+		perso.move(2,MARGEX,MARGEY);
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 	if (moveRight.isActive()) {
-		perso.move(3);
+		perso.move(3,MARGEX,MARGEY);
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}
 
 	if (getPosition.isActive()) {
-//		sf::Vector2f curPos = perso.getPosition();
 		printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
 	}
 
@@ -183,16 +187,20 @@ int main (void)
     auto elapsed = clock.restart();
     auto dt = elapsed.asSeconds();
 
+    mainEntities.update(dt);
+
 		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
-    mainEntities.update(dt);
+		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+
+
     	window.clear();
 	
 		
 	    window.draw(tmap);
-	    window.draw(omap);
+	    //window.draw(omap);
 
-	    window.draw(perso);
+	    window.draw(perso.spritePerso);
 	    
 	    mainEntities.render(window);
 

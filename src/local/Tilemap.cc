@@ -80,7 +80,7 @@ namespace local
 	int Tilemap::convert(float value){
 	
 		int tile = 0;
-			/*if(value < -0.5)
+			if(value < -0.5)
 			{
 				tile = 0;
 			}
@@ -92,11 +92,11 @@ namespace local
 			{
 				tile = 2;
 			}
-			else */if(value < 0.15)
+			else if(value < -0.1)
 			{
 				tile = 3;
 			}
-			else if(value < 0.4)
+			else if(value < 0)
 			{
 				tile = 4;
 			}

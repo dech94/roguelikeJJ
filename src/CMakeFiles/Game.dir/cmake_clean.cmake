@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/Game.dir/game/AssetManager.cc.o"
   "CMakeFiles/Game.dir/game/Clock.cc.o"
   "CMakeFiles/Game.dir/game/EventManager.cc.o"
@@ -26,6 +26,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/Game.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/Game.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

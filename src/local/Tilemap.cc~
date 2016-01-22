@@ -92,11 +92,11 @@ namespace local
 			{
 				tile = 2;
 			}
-			else if(value < 0.15)
+			else if(value < 0.1)
 			{
 				tile = 3;
 			}
-			else if(value < 0.4)
+			else if(value < 0.2)
 			{
 				tile = 4;
 			}

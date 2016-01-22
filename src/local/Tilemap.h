@@ -20,7 +20,7 @@ namespace local
 			void update(sf::Vector2u tileSize, int x, int y);
 			void cleanTile();
 		
-		//public:
+		protected:
 			sf::Texture m_tileset;
 			const local::Heightmap& m_heightmap;
 			sf::VertexArray m_tilemap;

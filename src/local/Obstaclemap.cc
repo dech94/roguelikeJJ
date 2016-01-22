@@ -27,5 +27,10 @@ namespace local
 
 	return tile;
 	}
+
+	bool Obstaclemap::isReachable(int x, int y)
+	{
+		return false;
+	}
 }
 
