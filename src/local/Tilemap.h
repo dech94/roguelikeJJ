@@ -26,7 +26,7 @@ namespace local
 			sf::VertexArray m_tilemap;
 			static const int MARGE = 20;
 			
-			int convert(float value);
+			virtual int convert(float value);
 			
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 			{

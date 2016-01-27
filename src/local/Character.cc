@@ -24,6 +24,11 @@ namespace local {
 		m_charPos.y = y;
 	}
 
+	sf::IntRect Character::getHitBox()
+	{
+		return (sf::IntRect(m_charPos.x-16,m_charPos.y+16,32,32));
+	}
+
 	void Character::move(int dir, int limX, int limY)
 	{
 		int nextX = m_charPos.x;
@@ -77,41 +82,14 @@ namespace local {
 		{
 			return false;
 		}
-		//m_character.setPrimitiveType(sf::Quads);
-		//m_character.resize(2);
 		return true;
 	}
 	
 	void Character::update(sf::Vector2u tileSize, int x, int y)
 	{
-		//int tileNum = m_dirCharacter;
 		spritePerso.setTexture(m_skin);
 		spritePerso.setTextureRect(sf::IntRect(m_dirCharacter*32, 0, 32, 32));
 		spritePerso.setPosition(m_charPos);
-//		int posX = tileNum % (m_skin.getSize().x/tileSize.x);
-//		int posY = tileNum / (m_skin.getSize().x/tileSize.x);
-//			
-//		//on récupère un pointeur vers le quad courant
-//		sf::Vertex* quad= &m_character[0];
-
-//		//on définit la position pour chacun des coins du quad
-//		quad[0].position = sf::Vector2f(m_charPos.x-16, m_charPos.y-16);
-//		quad[1].position = sf::Vector2f(m_charPos.x-16, m_charPos.y+16);
-//		quad[2].position = sf::Vector2f(m_charPos.x+16, m_charPos.y+16);
-//		quad[3].position = sf::Vector2f(m_charPos.x+16, m_charPos.y-16);
-//			
-//		//on définit les coordonnées de la texture à utiliser
-//		quad[0].texCoords = sf::Vector2f(posX*tileSize.x, posY*tileSize.y);
-//		quad[1].texCoords = sf::Vector2f((posX+1)*tileSize.x, posY*tileSize.y);
-//		quad[2].texCoords = sf::Vector2f((posX+1)*tileSize.x, (posY+1)*tileSize.y);
-//		quad[3].texCoords = sf::Vector2f(posX*tileSize.x, (posY+1)*tileSize.y);
-
-//		//on définit les coordonnées de la texture à utiliser
-//		quad[0].texCoords = sf::Vector2f(0, 0);
-//		quad[1].texCoords = sf::Vector2f(0, 32);
-//		quad[2].texCoords = sf::Vector2f(32, 32);
-//		quad[3].texCoords = sf::Vector2f(32, 0);
-
 	}
 
 		void Character::cleanTile()

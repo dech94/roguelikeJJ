@@ -20,7 +20,7 @@
 #include <game/WindowSettings.h>
 #include <local/Noise.h>
 #include <local/Heightmap.h>
-#include <local/Tilemap.h>
+#include <local/Background.h>
 #include <local/Obstaclemap.h>
 #include <local/Character.h>
 #include <chrono>
@@ -32,8 +32,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static const int HMAP_WIDTH = 200;
-  static const int HMAP_HEIGHT = 200;
+  static const int HMAP_WIDTH = 1000;
+  static const int HMAP_HEIGHT = 1000;
   static const int MARGEX = HMAP_WIDTH*32 - 1000;
   static const int MARGEY = HMAP_HEIGHT*32 -1000;
 
@@ -110,7 +110,7 @@ int main (void)
 
   local::Heightmap hmap(HMAP_WIDTH, HMAP_HEIGHT, seed);
   hmap.Compute();
-  local::Tilemap tmap(hmap);
+  local::Background tmap(hmap);
   local::Obstaclemap omap(hmap);
   if (!tmap.load(sf::Vector2u(32,32), "tile.png"))
   {
@@ -198,7 +198,7 @@ int main (void)
 	
 		
 	    window.draw(tmap);
-	    //window.draw(omap);
+	    window.draw(omap);
 
 	    window.draw(perso.spritePerso);
 	    

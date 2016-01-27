@@ -21,6 +21,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/dech94/Documents/git/roguelikeJJ/src/game/ResourceManager.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/game/ResourceManager.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/game/WindowGeometry.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/game/WindowGeometry.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/game/WindowSettings.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/game/WindowSettings.cc.o"
+  "/home/dech94/Documents/git/roguelikeJJ/src/local/Background.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Background.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Character.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Heightmap.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Noise.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Noise.cc.o"

@@ -42,9 +42,12 @@ add_executable(Game
   #perlin
   local/Noise.cc
   local/Heightmap.cc
+  #Tilemap
   local/Tilemap.cc
-  local/Character.cc
   local/Obstaclemap.cc
+  local/Background.cc
+  #Character
+  local/Character.cc
   #game
   Game.cpp
 )

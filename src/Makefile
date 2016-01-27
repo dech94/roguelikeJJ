@@ -519,6 +519,30 @@ game/WindowSettings.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/game/WindowSettings.cc.s
 .PHONY : game/WindowSettings.cc.s
 
+local/Background.o: local/Background.cc.o
+.PHONY : local/Background.o
+
+# target to build an object file
+local/Background.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Background.cc.o
+.PHONY : local/Background.cc.o
+
+local/Background.i: local/Background.cc.i
+.PHONY : local/Background.i
+
+# target to preprocess a source file
+local/Background.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Background.cc.i
+.PHONY : local/Background.cc.i
+
+local/Background.s: local/Background.cc.s
+.PHONY : local/Background.s
+
+# target to generate assembly for a file
+local/Background.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Background.cc.s
+.PHONY : local/Background.cc.s
+
 local/Character.o: local/Character.cc.o
 .PHONY : local/Character.o
 
@@ -699,6 +723,9 @@ help:
 	@echo "... game/WindowSettings.o"
 	@echo "... game/WindowSettings.i"
 	@echo "... game/WindowSettings.s"
+	@echo "... local/Background.o"
+	@echo "... local/Background.i"
+	@echo "... local/Background.s"
 	@echo "... local/Character.o"
 	@echo "... local/Character.i"
 	@echo "... local/Character.s"

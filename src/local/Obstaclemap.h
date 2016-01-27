@@ -12,8 +12,13 @@ namespace local
 
 			Obstaclemap(const local::Heightmap& heightmap);
 			virtual ~Obstaclemap();
+			void update(sf::Vector2u tileSize, int x, int y);
 			int convert(float value);
-			bool isReachable(int x, int y);
+			bool isReachable(sf::IntRect rec);
+
+		private:
+
+			std::vector<sf::IntRect> m_obstacle;
 
 	};
 }

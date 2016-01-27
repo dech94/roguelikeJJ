@@ -7,10 +7,9 @@
 #include <SFML/Graphics.hpp>
 
 namespace local{
-	class Character //: public sf::Drawable, public sf::Transformable
+	class Character
 	{
 	public:
-
 		explicit Character(int x, int y);
 		virtual ~Character();
 		sf::Vector2f getPosition();
@@ -20,6 +19,7 @@ namespace local{
 		void update(sf::Vector2u tileSize, int x, int y);
 		void cleanTile();
 		sf::Sprite spritePerso;
+		sf::IntRect getHitBox();
 		
 	private:
 		sf::Vector2f m_charPos;
@@ -27,22 +27,6 @@ namespace local{
 		sf::Texture m_skin;
 		sf::VertexArray m_character;
 		int m_dirCharacter;
-		
-
-		
-		//virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
-		//{
-//			sf::RectangleShape character(sf::Vector2f(32, 32));
-
-//			character.setPosition(m_charPos.x, m_charPos.y);
-
-//			//on applique la texturedu tileset
-//			states.texture = &m_skin;
-
-//			target.draw(character, states);
-			//window.draw(spritePerso);
-
-		//}
 	};
 }
 

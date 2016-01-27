@@ -486,32 +486,9 @@ CMakeFiles/Game.dir/local/Tilemap.cc.o.provides: CMakeFiles/Game.dir/local/Tilem
 
 CMakeFiles/Game.dir/local/Tilemap.cc.o.provides.build: CMakeFiles/Game.dir/local/Tilemap.cc.o
 
-CMakeFiles/Game.dir/local/Character.cc.o: CMakeFiles/Game.dir/flags.make
-CMakeFiles/Game.dir/local/Character.cc.o: local/Character.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_20)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Character.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Character.cc.o -c /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc
-
-CMakeFiles/Game.dir/local/Character.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Character.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc > CMakeFiles/Game.dir/local/Character.cc.i
-
-CMakeFiles/Game.dir/local/Character.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Character.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc -o CMakeFiles/Game.dir/local/Character.cc.s
-
-CMakeFiles/Game.dir/local/Character.cc.o.requires:
-.PHONY : CMakeFiles/Game.dir/local/Character.cc.o.requires
-
-CMakeFiles/Game.dir/local/Character.cc.o.provides: CMakeFiles/Game.dir/local/Character.cc.o.requires
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.o.provides.build
-.PHONY : CMakeFiles/Game.dir/local/Character.cc.o.provides
-
-CMakeFiles/Game.dir/local/Character.cc.o.provides.build: CMakeFiles/Game.dir/local/Character.cc.o
-
 CMakeFiles/Game.dir/local/Obstaclemap.cc.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/local/Obstaclemap.cc.o: local/Obstaclemap.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Obstaclemap.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Obstaclemap.cc.o -c /home/dech94/Documents/git/roguelikeJJ/src/local/Obstaclemap.cc
 
@@ -532,9 +509,55 @@ CMakeFiles/Game.dir/local/Obstaclemap.cc.o.provides: CMakeFiles/Game.dir/local/O
 
 CMakeFiles/Game.dir/local/Obstaclemap.cc.o.provides.build: CMakeFiles/Game.dir/local/Obstaclemap.cc.o
 
+CMakeFiles/Game.dir/local/Background.cc.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/local/Background.cc.o: local/Background.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_21)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Background.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Background.cc.o -c /home/dech94/Documents/git/roguelikeJJ/src/local/Background.cc
+
+CMakeFiles/Game.dir/local/Background.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Background.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/git/roguelikeJJ/src/local/Background.cc > CMakeFiles/Game.dir/local/Background.cc.i
+
+CMakeFiles/Game.dir/local/Background.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Background.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/git/roguelikeJJ/src/local/Background.cc -o CMakeFiles/Game.dir/local/Background.cc.s
+
+CMakeFiles/Game.dir/local/Background.cc.o.requires:
+.PHONY : CMakeFiles/Game.dir/local/Background.cc.o.requires
+
+CMakeFiles/Game.dir/local/Background.cc.o.provides: CMakeFiles/Game.dir/local/Background.cc.o.requires
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Background.cc.o.provides.build
+.PHONY : CMakeFiles/Game.dir/local/Background.cc.o.provides
+
+CMakeFiles/Game.dir/local/Background.cc.o.provides.build: CMakeFiles/Game.dir/local/Background.cc.o
+
+CMakeFiles/Game.dir/local/Character.cc.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/local/Character.cc.o: local/Character.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_22)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Character.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Character.cc.o -c /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc
+
+CMakeFiles/Game.dir/local/Character.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Character.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc > CMakeFiles/Game.dir/local/Character.cc.i
+
+CMakeFiles/Game.dir/local/Character.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Character.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc -o CMakeFiles/Game.dir/local/Character.cc.s
+
+CMakeFiles/Game.dir/local/Character.cc.o.requires:
+.PHONY : CMakeFiles/Game.dir/local/Character.cc.o.requires
+
+CMakeFiles/Game.dir/local/Character.cc.o.provides: CMakeFiles/Game.dir/local/Character.cc.o.requires
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.o.provides.build
+.PHONY : CMakeFiles/Game.dir/local/Character.cc.o.provides
+
+CMakeFiles/Game.dir/local/Character.cc.o.provides.build: CMakeFiles/Game.dir/local/Character.cc.o
+
 CMakeFiles/Game.dir/Game.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Game.cpp.o: Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/Game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/Game.cpp.o -c /home/dech94/Documents/git/roguelikeJJ/src/Game.cpp
 
@@ -576,8 +599,9 @@ Game_OBJECTS = \
 "CMakeFiles/Game.dir/local/Noise.cc.o" \
 "CMakeFiles/Game.dir/local/Heightmap.cc.o" \
 "CMakeFiles/Game.dir/local/Tilemap.cc.o" \
-"CMakeFiles/Game.dir/local/Character.cc.o" \
 "CMakeFiles/Game.dir/local/Obstaclemap.cc.o" \
+"CMakeFiles/Game.dir/local/Background.cc.o" \
+"CMakeFiles/Game.dir/local/Character.cc.o" \
 "CMakeFiles/Game.dir/Game.cpp.o"
 
 # External object files for target Game
@@ -602,8 +626,9 @@ Game: CMakeFiles/Game.dir/game/ModelManager.cc.o
 Game: CMakeFiles/Game.dir/local/Noise.cc.o
 Game: CMakeFiles/Game.dir/local/Heightmap.cc.o
 Game: CMakeFiles/Game.dir/local/Tilemap.cc.o
-Game: CMakeFiles/Game.dir/local/Character.cc.o
 Game: CMakeFiles/Game.dir/local/Obstaclemap.cc.o
+Game: CMakeFiles/Game.dir/local/Background.cc.o
+Game: CMakeFiles/Game.dir/local/Character.cc.o
 Game: CMakeFiles/Game.dir/Game.cpp.o
 Game: CMakeFiles/Game.dir/build.make
 Game: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -635,8 +660,9 @@ CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/game/ModelManager.cc.o.require
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Noise.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Heightmap.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Tilemap.cc.o.requires
-CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Character.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Obstaclemap.cc.o.requires
+CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Background.cc.o.requires
+CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Character.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/Game.cpp.o.requires
 .PHONY : CMakeFiles/Game.dir/requires
 

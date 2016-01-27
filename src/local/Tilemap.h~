@@ -20,13 +20,13 @@ namespace local
 			void update(sf::Vector2u tileSize, int x, int y);
 			void cleanTile();
 		
-		private:
+		protected:
 			sf::Texture m_tileset;
 			const local::Heightmap& m_heightmap;
 			sf::VertexArray m_tilemap;
 			static const int MARGE = 20;
 			
-			int convert(float value);
+			virtual int convert(float value);
 			
 			virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
 			{
