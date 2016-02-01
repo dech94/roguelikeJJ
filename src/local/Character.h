@@ -13,8 +13,9 @@ namespace local{
 		explicit Character(int x, int y);
 		virtual ~Character();
 		sf::Vector2f getPosition();
+		int getDir();
 		void setPosition(int x, int y);
-		void move(int dir, int limX, int limY);
+		void move(int dir, int limX, int limY, int dirBlock);
 		bool load(sf::Vector2u tileSize, std::string tileset);
 		void update(sf::Vector2u tileSize, int x, int y);
 		void cleanTile();

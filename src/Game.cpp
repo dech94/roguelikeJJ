@@ -32,8 +32,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static const int HMAP_WIDTH = 1000;
-  static const int HMAP_HEIGHT = 1000;
+  static const int HMAP_WIDTH = 200;
+  static const int HMAP_HEIGHT = 200;
   static const int MARGEX = HMAP_WIDTH*32 - 1000;
   static const int MARGEY = HMAP_HEIGHT*32 -1000;
 
@@ -159,20 +159,19 @@ int main (void)
     }
         // Check move of view
 	if (moveUP.isActive()) {
-		perso.move(0,MARGEX,MARGEY);
+		perso.move(0,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
-	}
-	if (moveDown.isActive()) {
-		perso.move(1,MARGEX,MARGEY);
+	}else if (moveDown.isActive()) {
+		perso.move(1,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
-	}
-	if (moveLeft.isActive()) {
-		perso.move(2,MARGEX,MARGEY);
+	}else if (moveLeft.isActive()) {
+		perso.move(2,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
-	}
-	if (moveRight.isActive()) {
-		perso.move(3,MARGEX,MARGEY);
+	}else if (moveRight.isActive()) {
+		perso.move(3,MARGEX,MARGEY, omap.isReachable(perso.getHitBox(), perso.getDir()));
 		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
+	}else{
+
 	}
 
 	if (getPosition.isActive()) {

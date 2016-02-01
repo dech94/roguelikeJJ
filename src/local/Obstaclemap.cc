@@ -5,7 +5,7 @@ namespace local
 	/*explicit*/ Obstaclemap::Obstaclemap(const local::Heightmap& heightmap)
 	:Tilemap(heightmap)
 	{
-		m_obstacle.resize(1);
+		m_obstacle.resize(m_heightmap.getWidth()*m_heightmap.getHeight());
 	}
 
 	/*virtual*/ Obstaclemap::~Obstaclemap()
@@ -15,7 +15,6 @@ namespace local
 
 	void Obstaclemap::update(sf::Vector2u tileSize, int x, int y)
 	{
-		
 		x=floor(x/32);
 		y=floor(y/32);
 //		printf("%d, %d\n",x,y);
@@ -34,8 +33,7 @@ namespace local
 
 				if(tileNum != 1)
 				{
-					m_obstacle.add(sf::IntRect((i+1)*tileSize.x, j*tileSize.y, tileSize.x, tileSize.y));
-					m_obstacle.resize(m_obstacle.size()++);
+					m_obstacle[idx] = (sf::IntRect((i)*tileSize.x, j*tileSize.y, tileSize.x, tileSize.y));
 				}
 			
 				int posX = tileNum % (m_tileset.getSize().x/tileSize.x);
@@ -76,9 +74,17 @@ namespace local
 	return tile;
 	}
 
-	bool Obstaclemap::isReachable(sf::IntRect rec)
+	int Obstaclemap::isReachable(sf::IntRect rec, int dir)
 	{
-		return false;
+		int posblock = 4;
+		for(unsigned int i=0;i<m_obstacle.size();i++)
+		{
+			if(rec.intersects(m_obstacle[i]))
+			{
+				posblock = dir;
+			}
+		}
+		return posblock;
 	}
 }
 

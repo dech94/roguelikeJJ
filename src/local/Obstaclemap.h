@@ -14,7 +14,7 @@ namespace local
 			virtual ~Obstaclemap();
 			void update(sf::Vector2u tileSize, int x, int y);
 			int convert(float value);
-			bool isReachable(sf::IntRect rec);
+			int isReachable(sf::IntRect rec, int dir);
 
 		private:
 

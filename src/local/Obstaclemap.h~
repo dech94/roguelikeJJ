@@ -14,11 +14,10 @@ namespace local
 			virtual ~Obstaclemap();
 			void update(sf::Vector2u tileSize, int x, int y);
 			int convert(float value);
-			bool isReachable(sf::IntRect rec);
+			int isReachable(sf::IntRect rec, int dir);
 
 		private:
 
-			static const int MARGE = 20;
 			std::vector<sf::IntRect> m_obstacle;
 
 	};
