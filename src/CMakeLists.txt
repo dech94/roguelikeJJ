@@ -48,6 +48,8 @@ add_executable(Game
   local/Background.cc
   #Character
   local/Character.cc
+  #Ennemy
+  local/Ennemy.cc
   #game
   Game.cpp
 )

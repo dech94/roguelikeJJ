@@ -570,6 +570,30 @@ local/Character.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Character.cc.s
 .PHONY : local/Character.cc.s
 
+local/Ennemy.o: local/Ennemy.cc.o
+.PHONY : local/Ennemy.o
+
+# target to build an object file
+local/Ennemy.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Ennemy.cc.o
+.PHONY : local/Ennemy.cc.o
+
+local/Ennemy.i: local/Ennemy.cc.i
+.PHONY : local/Ennemy.i
+
+# target to preprocess a source file
+local/Ennemy.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Ennemy.cc.i
+.PHONY : local/Ennemy.cc.i
+
+local/Ennemy.s: local/Ennemy.cc.s
+.PHONY : local/Ennemy.s
+
+# target to generate assembly for a file
+local/Ennemy.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Ennemy.cc.s
+.PHONY : local/Ennemy.cc.s
+
 local/Heightmap.o: local/Heightmap.cc.o
 .PHONY : local/Heightmap.o
 
@@ -732,6 +756,9 @@ help:
 	@echo "... local/Character.o"
 	@echo "... local/Character.i"
 	@echo "... local/Character.s"
+	@echo "... local/Ennemy.o"
+	@echo "... local/Ennemy.i"
+	@echo "... local/Ennemy.s"
 	@echo "... local/Heightmap.o"
 	@echo "... local/Heightmap.i"
 	@echo "... local/Heightmap.s"

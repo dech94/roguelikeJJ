@@ -13,7 +13,7 @@ namespace local{
 		sf::Vector2f getPosition();
 		int getDir();
 		void setPosition(int x, int y);
-		void attack(int dir, int limX, int limY, int dirBlock);
+		void attack(int posPersoX, int posPersoY, int limX, int limY);
 		bool load(sf::Vector2u tileSize, std::string tileset);
 		void update(sf::Vector2u tileSize, int x, int y);
 		void cleanTile();

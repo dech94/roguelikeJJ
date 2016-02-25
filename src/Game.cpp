@@ -130,11 +130,11 @@ int main (void)
   	return -1;
   }
 
-  /*local::Ennemy e1(posCamX+5, posCamY+5);
-  if (!perso.load(sf::Vector2u(32,32), "bat.gif"))
+  local::Ennemy e1(posCamX+100, posCamY+100);
+  if (!e1.load(sf::Vector2u(32,32), "bat.png"))
   {
   	return -1;
-  }*/
+  }
   // main loop
   game::Clock clock;
   
@@ -181,6 +181,9 @@ int main (void)
 
 	}
 
+		//Ennemy tracking
+	e1.attack(perso.getPosition().x,perso.getPosition().y,MARGEX,MARGEY);
+
 	if (getPosition.isActive()) {
 		//printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
 	}
@@ -198,6 +201,7 @@ int main (void)
 		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+		e1.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 
 
     	window.clear();
@@ -207,7 +211,7 @@ int main (void)
 	    window.draw(omap);
 
 	    window.draw(perso.spritePerso);
-	    
+	    window.draw(e1.spriteEnnemy);
 	    mainEntities.render(window);
 
 	    window.setView(gameView);

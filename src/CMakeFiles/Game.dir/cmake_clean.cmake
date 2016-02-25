@@ -21,6 +21,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/local/Obstaclemap.cc.o"
   "CMakeFiles/Game.dir/local/Background.cc.o"
   "CMakeFiles/Game.dir/local/Character.cc.o"
+  "CMakeFiles/Game.dir/local/Ennemy.cc.o"
   "CMakeFiles/Game.dir/Game.cpp.o"
   "Game.pdb"
   "Game"

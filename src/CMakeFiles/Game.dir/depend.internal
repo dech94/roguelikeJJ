@@ -103,6 +103,10 @@ CMakeFiles/Game.dir/local/Character.cc.o
  game/EventManager.h
  game/Id.h
  game/ResourceManager.h
+CMakeFiles/Game.dir/local/Ennemy.cc.o
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.cc
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
+ game/Entity.h
 CMakeFiles/Game.dir/local/Heightmap.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h

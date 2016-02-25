@@ -308,6 +308,16 @@ game/ResourceManager.h
 SFML/Graphics.hpp
 -
 
+/home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.cc
+Ennemy.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
+game/Entity.h
+-
+SFML/Graphics.hpp
+-
+
 /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc
 Heightmap.h
 /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h

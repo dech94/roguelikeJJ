@@ -103,6 +103,10 @@ CMakeFiles/Game.dir/local/Character.cc.o: game/EventManager.h
 CMakeFiles/Game.dir/local/Character.cc.o: game/Id.h
 CMakeFiles/Game.dir/local/Character.cc.o: game/ResourceManager.h
 
+CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.cc
+CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.h
+CMakeFiles/Game.dir/local/Ennemy.cc.o: game/Entity.h
+
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.cc
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.h
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Noise.h

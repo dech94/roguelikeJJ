@@ -50,53 +50,64 @@ namespace local {
 		}
 	}
 
-	void Ennemy::move(int dir, int limX, int limY, int dirBlock)
+	void Ennemy::attack(int posPersoX, int posPersoY, int limX, int limY)
 	{
 		int nextX = m_charPos.x;
 		int nextY = m_charPos.y;
+		int dir = 5;
+		if(m_charPos.y - posPersoY == 0){
+			if (m_charPos.x - posPersoX > 0)
+			{
+				dir = 2;
+			}
+			if (m_charPos.x - posPersoX < 0)
+			{
+				dir = 3;
+			}
+		}
+		if (m_charPos.y - posPersoY > 0)
+		{
+			dir = 0;
+		}
+		if (m_charPos.x - posPersoY < 0)
+		{
+			dir = 1;
+		}
 		switch(dir)
 		{
 			case 0 :
-				if(dirBlock!=0){
-					nextY -= m_speed;
-					if (nextY > 1000)
-					{
-						m_charPos.y -= m_speed;
-						m_dirEnnemy=0;
-					}
+				nextY -= m_speed;
+				if (nextY > 1000)
+				{
+					m_charPos.y -= m_speed;
+					m_dirEnnemy=0;
 				}
 				break;
 
 			case 1 :
-				if(dirBlock!=1){
-					nextY += m_speed;
-					if (nextY < limY)
-					{
-						m_charPos.y += m_speed;
-						m_dirEnnemy=1;
-					}
+				nextY += m_speed;
+				if (nextY < limY)
+				{
+					m_charPos.y += m_speed;
+					m_dirEnnemy=1;
 				}
 				break;
 
 			case 2 :
-				if(dirBlock!=2){
-					nextX -= m_speed;
-					if (nextX > 1000)
-					{
-						m_charPos.x -= m_speed;
-						m_dirEnnemy=2;
-					}
+				nextX -= m_speed;
+				if (nextX > 1000)
+				{
+					m_charPos.x -= m_speed;
+					m_dirEnnemy=2;
 				}
 				break;
 
 			case 3 :
-				if(dirBlock!=3){
-					nextX += m_speed;
-					if (nextX < limX)
-					{
-						m_charPos.x += m_speed;
-						m_dirEnnemy=3;
-					}
+				nextX += m_speed;
+				if (nextX < limX)
+				{
+					m_charPos.x += m_speed;
+					m_dirEnnemy=3;
 				}
 				break;
 
@@ -116,9 +127,9 @@ namespace local {
 	
 	void Ennemy::update(sf::Vector2u tileSize, int x, int y)
 	{
-		spritePerso.setTexture(m_skin);
-		spritePerso.setTextureRect(sf::IntRect(m_dirEnnemy*32, 0, 32, 32));
-		spritePerso.setPosition(m_charPos);
+		spriteEnnemy.setTexture(m_skin);
+		spriteEnnemy.setTextureRect(sf::IntRect(m_dirEnnemy*32, 0, 32, 32));
+		spriteEnnemy.setPosition(m_charPos);
 	}
 
 		void Ennemy::cleanTile()
