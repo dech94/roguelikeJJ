@@ -45,28 +45,27 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler.
+//CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
 //Flags used by the compiler during debug builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the compiler during release minsize builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=
+//Flags used by the compiler during release builds for minimum
+// size.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
-//Flags used by the compiler during release builds (/MD /Ob1 /Oi
-// /Ot /Oy /Gs will produce slightly less optimized but smaller
-// files).
-CMAKE_CXX_FLAGS_RELEASE:STRING=
+//Flags used by the compiler during release builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
-//Flags used by the compiler during Release with Debug Info builds.
-CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=
+//Flags used by the compiler during release builds with debug info.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Flags used by the linker.
-CMAKE_EXE_LINKER_FLAGS:STRING=' '
+CMAKE_EXE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during debug builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
@@ -138,7 +137,7 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules.
-CMAKE_MODULE_LINKER_FLAGS:STRING=' '
+CMAKE_MODULE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during debug builds.
 CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
@@ -168,7 +167,7 @@ CMAKE_PROJECT_NAME:STATIC=Game
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
 //Flags used by the linker during the creation of dll's.
-CMAKE_SHARED_LINKER_FLAGS:STRING=' '
+CMAKE_SHARED_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during debug builds.
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
@@ -246,18 +245,14 @@ Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_BUILD_TOOL
-CMAKE_BUILD_TOOL-ADVANCED:INTERNAL=1
-//What is the target build tool cmake is generating for.
-CMAKE_BUILD_TOOL:INTERNAL=/usr/bin/make
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/dech94/Documents/git/roguelikeJJ/src
 //Major version of cmake used to create the current loaded cache
-CMAKE_CACHE_MAJOR_VERSION:INTERNAL=2
+CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=8
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=12
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -279,7 +274,7 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Executable file format
-CMAKE_EXECUTABLE_FORMAT:INTERNAL=Unknown
+CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -292,8 +287,12 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
 CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
+//Name of external makefile project generator.
+CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Name of generator platform.
+CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Start directory with the top level CMakeLists.txt file for this
@@ -356,7 +355,7 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-2.8
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.2
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -399,11 +398,11 @@ SFML2_CFLAGS_OTHER:INTERNAL=
 SFML2_FOUND:INTERNAL=1
 SFML2_INCLUDEDIR:INTERNAL=
 SFML2_INCLUDE_DIRS:INTERNAL=
-SFML2_LDFLAGS:INTERNAL=-lsfml-graphics;-lsfml-window;-lsfml-audio;-L/usr/lib/x86_64-linux-gnu;-lsfml-system
+SFML2_LDFLAGS:INTERNAL=-lsfml-graphics;-lsfml-window;-lsfml-audio;-lsfml-system
 SFML2_LDFLAGS_OTHER:INTERNAL=
 SFML2_LIBDIR:INTERNAL=
 SFML2_LIBRARIES:INTERNAL=sfml-graphics;sfml-window;sfml-audio;sfml-system
-SFML2_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+SFML2_LIBRARY_DIRS:INTERNAL=
 SFML2_LIBS:INTERNAL=
 SFML2_LIBS_L:INTERNAL=
 SFML2_LIBS_OTHER:INTERNAL=
@@ -413,11 +412,11 @@ SFML2_STATIC_CFLAGS:INTERNAL=
 SFML2_STATIC_CFLAGS_I:INTERNAL=
 SFML2_STATIC_CFLAGS_OTHER:INTERNAL=
 SFML2_STATIC_INCLUDE_DIRS:INTERNAL=
-SFML2_STATIC_LDFLAGS:INTERNAL=-lsfml-graphics;-lsfml-window;-lsfml-system;-lsfml-audio;-L/usr/lib/x86_64-linux-gnu
+SFML2_STATIC_LDFLAGS:INTERNAL=-lsfml-graphics;-lsfml-window;-lsfml-audio;-lsfml-system
 SFML2_STATIC_LDFLAGS_OTHER:INTERNAL=
 SFML2_STATIC_LIBDIR:INTERNAL=
-SFML2_STATIC_LIBRARIES:INTERNAL=sfml-graphics;sfml-window;sfml-system;sfml-audio
-SFML2_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+SFML2_STATIC_LIBRARIES:INTERNAL=sfml-graphics;sfml-window;sfml-audio;sfml-system
+SFML2_STATIC_LIBRARY_DIRS:INTERNAL=
 SFML2_STATIC_LIBS:INTERNAL=
 SFML2_STATIC_LIBS_L:INTERNAL=
 SFML2_STATIC_LIBS_OTHER:INTERNAL=
@@ -426,18 +425,22 @@ SFML2_VERSION:INTERNAL=
 SFML2_sfml-audio_INCLUDEDIR:INTERNAL=/usr/include
 SFML2_sfml-audio_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 SFML2_sfml-audio_PREFIX:INTERNAL=/usr
-SFML2_sfml-audio_VERSION:INTERNAL=2.1.0
+SFML2_sfml-audio_VERSION:INTERNAL=2.3.2
 SFML2_sfml-graphics_INCLUDEDIR:INTERNAL=/usr/include
 SFML2_sfml-graphics_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 SFML2_sfml-graphics_PREFIX:INTERNAL=/usr
-SFML2_sfml-graphics_VERSION:INTERNAL=2.1.0
+SFML2_sfml-graphics_VERSION:INTERNAL=2.3.2
 //Components requested for this build tree.
 _Boost_COMPONENTS_SEARCHED:INTERNAL=filesystem;system
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR value.
 _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 __pkg_config_checked_SFML2:INTERNAL=1
 

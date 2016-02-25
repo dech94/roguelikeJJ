@@ -23,6 +23,7 @@
 #include <local/Background.h>
 #include <local/Obstaclemap.h>
 #include <local/Character.h>
+#include <local/Ennemy.h>
 #include <chrono>
 #include <stdio.h>
 #include <cmath>
@@ -127,7 +128,13 @@ int main (void)
   if (!perso.load(sf::Vector2u(32,32), "perso.png"))
   {
   	return -1;
-  } 
+  }
+
+  /*local::Ennemy e1(posCamX+5, posCamY+5);
+  if (!perso.load(sf::Vector2u(32,32), "bat.gif"))
+  {
+  	return -1;
+  }*/
   // main loop
   game::Clock clock;
   
@@ -160,22 +167,22 @@ int main (void)
         // Check move of view
 	if (moveUP.isActive()) {
 		perso.move(0,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
-		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
+//		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}else if (moveDown.isActive()) {
 		perso.move(1,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
-		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
+//		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}else if (moveLeft.isActive()) {
 		perso.move(2,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
-		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
+//		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}else if (moveRight.isActive()) {
 		perso.move(3,MARGEX,MARGEY, omap.isReachable(perso.getHitBox(), perso.getDir()));
-		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
+//		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
 	}else{
 
 	}
 
 	if (getPosition.isActive()) {
-		printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
+		//printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
 	}
 
 	gameView.setCenter(perso.getPosition());

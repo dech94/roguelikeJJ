@@ -38,7 +38,7 @@ namespace local
 			}
 			else if(value < 0.5)
 			{
-				tile = 5;
+				tile = 4;
 			}
 			else if(value < 0.7)
 			{

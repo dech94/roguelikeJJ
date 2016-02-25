@@ -66,6 +66,14 @@ namespace local
 			{
 				tile = 0;
 			}
+			else if (value < -0.11 && value > -0.114)
+			{
+				tile = 3;
+			}
+			else if ((value < 0.1 && value > 0.08) || (value < 0.13 && value > 0.128) || (value < 0.20 && value > 0.198) || (value < 0.60 && value > 0.588))
+			{
+				tile = 2;
+			}
 			else
 			{
 				tile = 1;

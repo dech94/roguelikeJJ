@@ -1,37 +1,37 @@
-#include "Character.h"
+#include "Ennemy.h"
 
 namespace local {
 
-/*explicit*/Character::Character(int x, int y)
+/*explicit*/Ennemy::Ennemy(int x, int y)
 	{
 		m_charPos.x = x;
 		m_charPos.y = y;
-		m_dirCharacter = 0;
+		m_dirEnnemy = 0;
 	}
 
-/*virtuel*/Character::~Character()
+/*virtuel*/Ennemy::~Ennemy()
 	{
 	}
 
-	sf::Vector2f Character::getPosition()
+	sf::Vector2f Ennemy::getPosition()
 	{
 		return m_charPos;
 	}
 
-	int Character::getDir()
+	int Ennemy::getDir()
 	{
-		return m_dirCharacter;
+		return m_dirEnnemy;
 	}
 
-	void Character::setPosition(int x, int y)
+	void Ennemy::setPosition(int x, int y)
 	{
 		m_charPos.x = x;
 		m_charPos.y = y;
 	}
 
-	sf::IntRect Character::getHitBox()
+	sf::IntRect Ennemy::getHitBox()
 	{
-		switch(m_dirCharacter)
+		switch(m_dirEnnemy)
 		{
 			case 0 :
 					return (sf::IntRect(m_charPos.x,m_charPos.y-m_speed,16,32));
@@ -50,7 +50,7 @@ namespace local {
 		}
 	}
 
-	void Character::move(int dir, int limX, int limY, int dirBlock)
+	void Ennemy::move(int dir, int limX, int limY, int dirBlock)
 	{
 		int nextX = m_charPos.x;
 		int nextY = m_charPos.y;
@@ -62,7 +62,7 @@ namespace local {
 					if (nextY > 1000)
 					{
 						m_charPos.y -= m_speed;
-						m_dirCharacter=0;
+						m_dirEnnemy=0;
 					}
 				}
 				break;
@@ -73,7 +73,7 @@ namespace local {
 					if (nextY < limY)
 					{
 						m_charPos.y += m_speed;
-						m_dirCharacter=1;
+						m_dirEnnemy=1;
 					}
 				}
 				break;
@@ -84,7 +84,7 @@ namespace local {
 					if (nextX > 1000)
 					{
 						m_charPos.x -= m_speed;
-						m_dirCharacter=2;
+						m_dirEnnemy=2;
 					}
 				}
 				break;
@@ -95,7 +95,7 @@ namespace local {
 					if (nextX < limX)
 					{
 						m_charPos.x += m_speed;
-						m_dirCharacter=3;
+						m_dirEnnemy=3;
 					}
 				}
 				break;
@@ -104,7 +104,7 @@ namespace local {
 				break;
 		}
 	}
-	bool Character::load(sf::Vector2u tileSize, std::string tileset)
+	bool Ennemy::load(sf::Vector2u tileSize, std::string tileset)
 	{
 		//chargement des tiles
 		if (!m_skin.loadFromFile(tileset))
@@ -114,15 +114,17 @@ namespace local {
 		return true;
 	}
 	
-	void Character::update(sf::Vector2u tileSize, int x, int y)
+	void Ennemy::update(sf::Vector2u tileSize, int x, int y)
 	{
 		spritePerso.setTexture(m_skin);
-		spritePerso.setTextureRect(sf::IntRect(m_dirCharacter*32, 0, 32, 32));
+		spritePerso.setTextureRect(sf::IntRect(m_dirEnnemy*32, 0, 32, 32));
 		spritePerso.setPosition(m_charPos);
 	}
 
-		void Character::cleanTile()
+		void Ennemy::cleanTile()
 	{
-		m_character.clear();
+		m_Ennemy.clear();
 	}
 }
+
+
