@@ -7,6 +7,7 @@ namespace local {
 		m_charPos.x = x;
 		m_charPos.y = y;
 		m_dirEnnemy = 0;
+		m_gameOver = false;
 	}
 
 /*virtuel*/Ennemy::~Ennemy()
@@ -60,16 +61,21 @@ namespace local {
 			{
 				dir = 2;
 			}
-			if (m_charPos.x - posPersoX < 0)
+			else if (m_charPos.x - posPersoX < 0)
 			{
 				dir = 3;
+			}
+			else
+			{
+				m_gameOver = true;
+				dir = 5;
 			}
 		}
 		if (m_charPos.y - posPersoY > 0)
 		{
 			dir = 0;
 		}
-		if (m_charPos.x - posPersoY < 0)
+		if (m_charPos.y - posPersoY < 0)
 		{
 			dir = 1;
 		}
@@ -132,9 +138,14 @@ namespace local {
 		spriteEnnemy.setPosition(m_charPos);
 	}
 
-		void Ennemy::cleanTile()
+	void Ennemy::cleanTile()
 	{
 		m_Ennemy.clear();
+	}
+
+	bool Ennemy::getStatus()
+	{
+		return m_gameOver;
 	}
 }
 

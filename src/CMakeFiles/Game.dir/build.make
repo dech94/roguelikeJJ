@@ -578,9 +578,32 @@ CMakeFiles/Game.dir/local/Ennemy.cc.o.provides: CMakeFiles/Game.dir/local/Ennemy
 
 CMakeFiles/Game.dir/local/Ennemy.cc.o.provides.build: CMakeFiles/Game.dir/local/Ennemy.cc.o
 
+CMakeFiles/Game.dir/local/Over.cc.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/local/Over.cc.o: local/Over.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/local/Over.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/local/Over.cc.o -c /home/dech94/Documents/git/roguelikeJJ/src/local/Over.cc
+
+CMakeFiles/Game.dir/local/Over.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/local/Over.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dech94/Documents/git/roguelikeJJ/src/local/Over.cc > CMakeFiles/Game.dir/local/Over.cc.i
+
+CMakeFiles/Game.dir/local/Over.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/local/Over.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dech94/Documents/git/roguelikeJJ/src/local/Over.cc -o CMakeFiles/Game.dir/local/Over.cc.s
+
+CMakeFiles/Game.dir/local/Over.cc.o.requires:
+.PHONY : CMakeFiles/Game.dir/local/Over.cc.o.requires
+
+CMakeFiles/Game.dir/local/Over.cc.o.provides: CMakeFiles/Game.dir/local/Over.cc.o.requires
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Over.cc.o.provides.build
+.PHONY : CMakeFiles/Game.dir/local/Over.cc.o.provides
+
+CMakeFiles/Game.dir/local/Over.cc.o.provides.build: CMakeFiles/Game.dir/local/Over.cc.o
+
 CMakeFiles/Game.dir/Game.cpp.o: CMakeFiles/Game.dir/flags.make
 CMakeFiles/Game.dir/Game.cpp.o: Game.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Game.dir/Game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Game.dir/Game.cpp.o -c /home/dech94/Documents/git/roguelikeJJ/src/Game.cpp
 
@@ -626,6 +649,7 @@ Game_OBJECTS = \
 "CMakeFiles/Game.dir/local/Background.cc.o" \
 "CMakeFiles/Game.dir/local/Character.cc.o" \
 "CMakeFiles/Game.dir/local/Ennemy.cc.o" \
+"CMakeFiles/Game.dir/local/Over.cc.o" \
 "CMakeFiles/Game.dir/Game.cpp.o"
 
 # External object files for target Game
@@ -654,6 +678,7 @@ Game: CMakeFiles/Game.dir/local/Obstaclemap.cc.o
 Game: CMakeFiles/Game.dir/local/Background.cc.o
 Game: CMakeFiles/Game.dir/local/Character.cc.o
 Game: CMakeFiles/Game.dir/local/Ennemy.cc.o
+Game: CMakeFiles/Game.dir/local/Over.cc.o
 Game: CMakeFiles/Game.dir/Game.cpp.o
 Game: CMakeFiles/Game.dir/build.make
 Game: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -689,6 +714,7 @@ CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Obstaclemap.cc.o.require
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Background.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Character.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Ennemy.cc.o.requires
+CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/local/Over.cc.o.requires
 CMakeFiles/Game.dir/requires: CMakeFiles/Game.dir/Game.cpp.o.requires
 .PHONY : CMakeFiles/Game.dir/requires
 

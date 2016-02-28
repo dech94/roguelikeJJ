@@ -17,6 +17,7 @@ namespace local{
 		bool load(sf::Vector2u tileSize, std::string tileset);
 		void update(sf::Vector2u tileSize, int x, int y);
 		void cleanTile();
+		bool getStatus();
 		sf::Sprite spriteEnnemy;
 		sf::IntRect getHitBox();
 		
@@ -26,6 +27,7 @@ namespace local{
 		sf::Texture m_skin;
 		sf::VertexArray m_Ennemy;
 		int m_dirEnnemy;
+		bool m_gameOver;
 	};
 }
 

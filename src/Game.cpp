@@ -24,6 +24,7 @@
 #include <local/Obstaclemap.h>
 #include <local/Character.h>
 #include <local/Ennemy.h>
+#include <local/Over.h>
 #include <chrono>
 #include <stdio.h>
 #include <cmath>
@@ -130,11 +131,21 @@ int main (void)
   	return -1;
   }
 
+  //Ennemy
   local::Ennemy e1(posCamX+100, posCamY+100);
   if (!e1.load(sf::Vector2u(32,32), "bat.png"))
   {
   	return -1;
   }
+
+  //TitleScreen
+  local::Over gameover;
+  		if (!gameover.load("gameOver.png"))
+		{
+			return -1;
+		}
+  //GameOver
+  bool gameOver=false;
   // main loop
   game::Clock clock;
   
@@ -183,6 +194,7 @@ int main (void)
 
 		//Ennemy tracking
 	e1.attack(perso.getPosition().x,perso.getPosition().y,MARGEX,MARGEY);
+	gameOver=e1.getStatus();
 
 	if (getPosition.isActive()) {
 		//printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
@@ -202,24 +214,28 @@ int main (void)
 		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		e1.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+		gameover.update(perso.getPosition());
 
 
-    	window.clear();
-	
-		
-	    window.draw(tmap);
-	    window.draw(omap);
 
-	    window.draw(perso.spritePerso);
-	    window.draw(e1.spriteEnnemy);
-	    mainEntities.render(window);
+		window.clear();
 
-	    window.setView(gameView);
-	    //window.setView(minimapView);
+		window.draw(tmap);
+		window.draw(omap);
 
-	    window.display();
+		window.draw(perso.spritePerso);
+		window.draw(e1.spriteEnnemy);
+		if(gameOver == true){
+			window.draw(gameover.sprite);
+		}
+		mainEntities.render(window);
 
-	    actions.reset();
+		window.setView(gameView);
+		//window.setView(minimapView);
+
+		window.display();
+
+		actions.reset();
 //	}
   }
 

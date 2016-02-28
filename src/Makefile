@@ -666,6 +666,30 @@ local/Obstaclemap.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Obstaclemap.cc.s
 .PHONY : local/Obstaclemap.cc.s
 
+local/Over.o: local/Over.cc.o
+.PHONY : local/Over.o
+
+# target to build an object file
+local/Over.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Over.cc.o
+.PHONY : local/Over.cc.o
+
+local/Over.i: local/Over.cc.i
+.PHONY : local/Over.i
+
+# target to preprocess a source file
+local/Over.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Over.cc.i
+.PHONY : local/Over.cc.i
+
+local/Over.s: local/Over.cc.s
+.PHONY : local/Over.s
+
+# target to generate assembly for a file
+local/Over.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Over.cc.s
+.PHONY : local/Over.cc.s
+
 local/Tilemap.o: local/Tilemap.cc.o
 .PHONY : local/Tilemap.o
 
@@ -768,6 +792,9 @@ help:
 	@echo "... local/Obstaclemap.o"
 	@echo "... local/Obstaclemap.i"
 	@echo "... local/Obstaclemap.s"
+	@echo "... local/Over.o"
+	@echo "... local/Over.i"
+	@echo "... local/Over.s"
 	@echo "... local/Tilemap.o"
 	@echo "... local/Tilemap.i"
 	@echo "... local/Tilemap.s"
