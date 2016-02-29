@@ -2,7 +2,7 @@
 
 namespace local
 {
-	/*explicit*/ Tilemap::Tilemap(const local::Heightmap& heightmap)
+	/*explicit*/ Tilemap::Tilemap(local::Heightmap& heightmap)
 	:m_heightmap(heightmap)
 	{
 	

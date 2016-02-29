@@ -594,6 +594,30 @@ local/Ennemy.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Ennemy.cc.s
 .PHONY : local/Ennemy.cc.s
 
+local/HUD.o: local/HUD.cc.o
+.PHONY : local/HUD.o
+
+# target to build an object file
+local/HUD.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/HUD.cc.o
+.PHONY : local/HUD.cc.o
+
+local/HUD.i: local/HUD.cc.i
+.PHONY : local/HUD.i
+
+# target to preprocess a source file
+local/HUD.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/HUD.cc.i
+.PHONY : local/HUD.cc.i
+
+local/HUD.s: local/HUD.cc.s
+.PHONY : local/HUD.s
+
+# target to generate assembly for a file
+local/HUD.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/HUD.cc.s
+.PHONY : local/HUD.cc.s
+
 local/Heightmap.o: local/Heightmap.cc.o
 .PHONY : local/Heightmap.o
 
@@ -690,6 +714,30 @@ local/Over.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Over.cc.s
 .PHONY : local/Over.cc.s
 
+local/Rewardmap.o: local/Rewardmap.cc.o
+.PHONY : local/Rewardmap.o
+
+# target to build an object file
+local/Rewardmap.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Rewardmap.cc.o
+.PHONY : local/Rewardmap.cc.o
+
+local/Rewardmap.i: local/Rewardmap.cc.i
+.PHONY : local/Rewardmap.i
+
+# target to preprocess a source file
+local/Rewardmap.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Rewardmap.cc.i
+.PHONY : local/Rewardmap.cc.i
+
+local/Rewardmap.s: local/Rewardmap.cc.s
+.PHONY : local/Rewardmap.s
+
+# target to generate assembly for a file
+local/Rewardmap.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Rewardmap.cc.s
+.PHONY : local/Rewardmap.cc.s
+
 local/Tilemap.o: local/Tilemap.cc.o
 .PHONY : local/Tilemap.o
 
@@ -783,6 +831,9 @@ help:
 	@echo "... local/Ennemy.o"
 	@echo "... local/Ennemy.i"
 	@echo "... local/Ennemy.s"
+	@echo "... local/HUD.o"
+	@echo "... local/HUD.i"
+	@echo "... local/HUD.s"
 	@echo "... local/Heightmap.o"
 	@echo "... local/Heightmap.i"
 	@echo "... local/Heightmap.s"
@@ -795,6 +846,9 @@ help:
 	@echo "... local/Over.o"
 	@echo "... local/Over.i"
 	@echo "... local/Over.s"
+	@echo "... local/Rewardmap.o"
+	@echo "... local/Rewardmap.i"
+	@echo "... local/Rewardmap.s"
 	@echo "... local/Tilemap.o"
 	@echo "... local/Tilemap.i"
 	@echo "... local/Tilemap.s"

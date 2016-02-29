@@ -14,7 +14,7 @@ namespace local
 	class Tilemap : public sf::Drawable, public sf::Transformable
 	{
 		public:
-			explicit Tilemap(const local::Heightmap& heightmap);
+			explicit Tilemap(local::Heightmap& heightmap);
 			virtual ~Tilemap();
 			bool load(sf::Vector2u tileSize, std::string tileset);
 			void update(sf::Vector2u tileSize, int x, int y);
@@ -22,7 +22,7 @@ namespace local
 		
 		protected:
 			sf::Texture m_tileset;
-			const local::Heightmap& m_heightmap;
+			local::Heightmap& m_heightmap;
 			sf::VertexArray m_tilemap;
 			static const int MARGE = 20;
 			

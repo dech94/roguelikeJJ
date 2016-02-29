@@ -1,19 +1,20 @@
-#include "Obstaclemap.h"
+#include "Rewardmap.h"
 
 namespace local
 {
-	/*explicit*/ Obstaclemap::Obstaclemap(local::Heightmap& heightmap)
+	/*explicit*/ Rewardmap::Rewardmap(local::Heightmap& heightmap)
 	:Tilemap(heightmap)
 	{
 		m_obstacle.resize(m_heightmap.getWidth()*m_heightmap.getHeight());
+		m_type.resize(m_heightmap.getWidth()*m_heightmap.getHeight());
 	}
 
-	/*virtual*/ Obstaclemap::~Obstaclemap()
+	/*virtual*/ Rewardmap::~Rewardmap()
 	{
 
 	}
 
-	void Obstaclemap::update(sf::Vector2u tileSize, int x, int y)
+	void Rewardmap::update(sf::Vector2u tileSize, int x, int y)
 	{
 		x=floor(x/32);
 		y=floor(y/32);
@@ -31,9 +32,10 @@ namespace local
 			
 				int tileNum = convert(value);
 
-				if(tileNum != 1)
+				if(tileNum != 0)
 				{
 					m_obstacle[idx] = (sf::IntRect((i)*tileSize.x, j*tileSize.y, tileSize.x, tileSize.y));
+					m_type[idx] = (tileNum);
 				}
 			
 				int posX = tileNum % (m_tileset.getSize().x/tileSize.x);
@@ -59,40 +61,55 @@ namespace local
 		}
 	}
 
-	int Obstaclemap::convert(float value){
+	int Rewardmap::convert(float value){
 	
-		int tile = 1;
-			if(value < -0.2)
+		int tile = 0;
+			if(value < -0.10 && value > -0.101)
 			{
-				tile = 0;
+				tile = 1;
 			}
-			else if (value < -0.11 && value > -0.114)
-			{
-				tile = 3;
-			}
-			else if ((value < 0.1 && value > 0.08) || (value < 0.13 && value > 0.128) || (value < 0.20 && value > 0.198) || (value < 0.60 && value > 0.588))
+			else if (value < 0.30 && value > 0.299)
 			{
 				tile = 2;
 			}
+			else if (value < 0.50 && value > 0.499)
+			{
+				tile = 3;
+			}
+			else if (value < 0.80 && value > 0.799)
+			{
+				tile = 4;
+			}
+			/*else if (value == 2)
+			{
+				tile = 5;
+			}*/
 			else
 			{
-				tile = 1;
+				tile = 0;
 			}
 
 	return tile;
 	}
 
-	int Obstaclemap::isReachable(sf::IntRect rec, int dir)
+	int Rewardmap::isColecable(sf::IntRect rec)
 	{
-		int posblock = 4;
-		for(unsigned int i=0;i<m_obstacle.size();i++)
+		sf::Vector2u tileSize(32,32);
+		int key = 0;
+		for(unsigned int k=0;k<m_obstacle.size();k++)
 		{
-			if(rec.intersects(m_obstacle[i]))
+			if(rec.intersects(m_obstacle[k]))
 			{
-				posblock = dir;
+				key = m_type[k];
+				int ibis = m_obstacle[k].left/tileSize.x;
+				int jbis = m_obstacle[k].top/tileSize.y;
+				m_heightmap.setValue(ibis,jbis,m_heightmap.getValue(ibis,jbis)+0.0001);
+				m_type[k]=0;
+				m_obstacle[k]=(sf::IntRect(0, 0, 32, 32));
 			}
 		}
-		return posblock;
+		
+		return key;
 	}
 }
 

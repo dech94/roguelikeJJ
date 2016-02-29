@@ -10,7 +10,7 @@ namespace local
 	{
 		public:
 
-			Obstaclemap(const local::Heightmap& heightmap);
+			Obstaclemap(local::Heightmap& heightmap);
 			virtual ~Obstaclemap();
 			void update(sf::Vector2u tileSize, int x, int y);
 			int convert(float value);

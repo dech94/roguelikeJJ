@@ -24,10 +24,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Background.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Background.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Character.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Character.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Ennemy.cc.o"
+  "/home/dech94/Documents/git/roguelikeJJ/src/local/HUD.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/HUD.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Heightmap.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Noise.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Noise.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Obstaclemap.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Obstaclemap.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Over.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Over.cc.o"
+  "/home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Rewardmap.cc.o"
   "/home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.cc" "/home/dech94/Documents/git/roguelikeJJ/src/CMakeFiles/Game.dir/local/Tilemap.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

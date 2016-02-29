@@ -22,9 +22,11 @@
 #include <local/Heightmap.h>
 #include <local/Background.h>
 #include <local/Obstaclemap.h>
+#include <local/Rewardmap.h>
 #include <local/Character.h>
 #include <local/Ennemy.h>
 #include <local/Over.h>
+#include <local/HUD.h>
 #include <chrono>
 #include <stdio.h>
 #include <cmath>
@@ -34,8 +36,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static const int HMAP_WIDTH = 200;
-  static const int HMAP_HEIGHT = 200;
+  static const int HMAP_WIDTH = 1024;
+  static const int HMAP_HEIGHT = 1024;
   static const int MARGEX = HMAP_WIDTH*32 - 1000;
   static const int MARGEY = HMAP_HEIGHT*32 -1000;
 
@@ -114,12 +116,18 @@ int main (void)
   hmap.Compute();
   local::Background tmap(hmap);
   local::Obstaclemap omap(hmap);
+  local::Rewardmap rmap(hmap);
   if (!tmap.load(sf::Vector2u(32,32), "tile.png"))
   {
   	return -1;
   } 
 
   if (!omap.load(sf::Vector2u(32,32), "map.png"))
+  {
+  	return -1;
+  } 
+
+  if (!rmap.load(sf::Vector2u(32,32), "key.png"))
   {
   	return -1;
   } 
@@ -139,6 +147,11 @@ int main (void)
   }
 
   //TitleScreen
+  local::HUD hud;
+  		if (!hud.load("HUD.png"))
+		{
+			return -1;
+		}
   local::Over gameover;
   		if (!gameover.load("gameOver.png"))
 		{
@@ -176,6 +189,7 @@ int main (void)
       geometry.update(event);
     }
         // Check move of view
+if(!gameOver){
 	if (moveUP.isActive()) {
 		perso.move(0,MARGEX,MARGEY,omap.isReachable(perso.getHitBox(), perso.getDir()));
 //		printf("%f : %f\n",perso.getPosition().x,perso.getPosition().y);
@@ -191,10 +205,13 @@ int main (void)
 	}else{
 
 	}
-
+}
 		//Ennemy tracking
 	e1.attack(perso.getPosition().x,perso.getPosition().y,MARGEX,MARGEY);
 	gameOver=e1.getStatus();
+
+		//Objectif
+	int key = rmap.isColecable(perso.getHitBox());
 
 	if (getPosition.isActive()) {
 		//printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
@@ -212,9 +229,11 @@ int main (void)
 
 		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
-		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+		rmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		e1.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		gameover.update(perso.getPosition());
+		hud.update(perso.getPosition(),0,0,0,0);
+		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 
 
 
@@ -222,9 +241,11 @@ int main (void)
 
 		window.draw(tmap);
 		window.draw(omap);
-
+		window.draw(rmap);
 		window.draw(perso.spritePerso);
 		window.draw(e1.spriteEnnemy);
+		window.draw(hud.sprite);
+		window.draw(hud.text);
 		if(gameOver == true){
 			window.draw(gameover.sprite);
 		}

@@ -26,10 +26,12 @@ CMakeFiles/Game.dir/Game.cpp.o: game/WindowSettings.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Background.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Character.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Ennemy.h
+CMakeFiles/Game.dir/Game.cpp.o: local/HUD.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Heightmap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Noise.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Obstaclemap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Over.h
+CMakeFiles/Game.dir/Game.cpp.o: local/Rewardmap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Tilemap.h
 
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.cc
@@ -108,6 +110,10 @@ CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.cc
 CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.h
 CMakeFiles/Game.dir/local/Ennemy.cc.o: game/Entity.h
 
+CMakeFiles/Game.dir/local/HUD.cc.o: local/HUD.cc
+CMakeFiles/Game.dir/local/HUD.cc.o: local/HUD.h
+CMakeFiles/Game.dir/local/HUD.cc.o: game/Entity.h
+
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.cc
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Heightmap.h
 CMakeFiles/Game.dir/local/Heightmap.cc.o: local/Noise.h
@@ -127,6 +133,13 @@ CMakeFiles/Game.dir/local/Obstaclemap.cc.o: game/Vector.h
 CMakeFiles/Game.dir/local/Over.cc.o: local/Over.cc
 CMakeFiles/Game.dir/local/Over.cc.o: local/Over.h
 CMakeFiles/Game.dir/local/Over.cc.o: game/Entity.h
+
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: local/Heightmap.h
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: local/Noise.h
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: local/Rewardmap.cc
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: local/Rewardmap.h
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: local/Tilemap.h
+CMakeFiles/Game.dir/local/Rewardmap.cc.o: game/Vector.h
 
 CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Heightmap.h
 CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Noise.h

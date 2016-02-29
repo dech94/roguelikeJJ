@@ -10,7 +10,7 @@ namespace local
 	{
 		public:
 
-			Background(const local::Heightmap& heightmap);
+			Background(local::Heightmap& heightmap);
 			virtual ~Background();
 			int convert(float value);
 	};

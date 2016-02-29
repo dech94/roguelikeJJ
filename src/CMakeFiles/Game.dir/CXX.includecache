@@ -55,11 +55,15 @@ local/Background.h
 -
 local/Obstaclemap.h
 -
+local/Rewardmap.h
+-
 local/Character.h
 -
 local/Ennemy.h
 -
 local/Over.h
+-
+local/HUD.h
 -
 chrono
 -
@@ -320,6 +324,16 @@ game/Entity.h
 SFML/Graphics.hpp
 -
 
+/home/dech94/Documents/git/roguelikeJJ/src/local/HUD.cc
+HUD.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/HUD.h
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/HUD.h
+game/Entity.h
+-
+SFML/Graphics.hpp
+-
+
 /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc
 Heightmap.h
 /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
@@ -383,6 +397,16 @@ game/Entity.h
 -
 SFML/Graphics.hpp
 -
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.cc
+Rewardmap.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.h
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.h
+Tilemap.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.h
+Heightmap.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
 
 /home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.cc
 Tilemap.h
@@ -560,6 +584,12 @@ game/Entity.h
 SFML/Graphics.hpp
 -
 
+local/HUD.h
+game/Entity.h
+-
+SFML/Graphics.hpp
+-
+
 local/Heightmap.h
 stdlib.h
 -
@@ -605,6 +635,12 @@ game/Entity.h
 -
 SFML/Graphics.hpp
 -
+
+local/Rewardmap.h
+Tilemap.h
+local/Tilemap.h
+Heightmap.h
+local/Heightmap.h
 
 local/Tilemap.h
 stdlib.h

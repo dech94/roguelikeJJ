@@ -27,10 +27,12 @@ CMakeFiles/Game.dir/Game.cpp.o
  local/Background.h
  local/Character.h
  local/Ennemy.h
+ local/HUD.h
  local/Heightmap.h
  local/Noise.h
  local/Obstaclemap.h
  local/Over.h
+ local/Rewardmap.h
  local/Tilemap.h
 CMakeFiles/Game.dir/game/Action.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/game/Action.cc
@@ -108,6 +110,10 @@ CMakeFiles/Game.dir/local/Ennemy.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
  game/Entity.h
+CMakeFiles/Game.dir/local/HUD.cc.o
+ /home/dech94/Documents/git/roguelikeJJ/src/local/HUD.cc
+ /home/dech94/Documents/git/roguelikeJJ/src/local/HUD.h
+ game/Entity.h
 CMakeFiles/Game.dir/local/Heightmap.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
@@ -128,6 +134,13 @@ CMakeFiles/Game.dir/local/Over.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Over.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Over.h
  game/Entity.h
+CMakeFiles/Game.dir/local/Rewardmap.cc.o
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Noise.h
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.cc
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Rewardmap.h
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.h
+ game/Vector.h
 CMakeFiles/Game.dir/local/Tilemap.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
  /home/dech94/Documents/git/roguelikeJJ/src/local/Noise.h

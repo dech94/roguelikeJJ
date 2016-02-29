@@ -2,7 +2,7 @@
 
 namespace local
 {
-	/*explicit*/ Background::Background(const local::Heightmap& heightmap)
+	/*explicit*/ Background::Background(local::Heightmap& heightmap)
 	:Tilemap(heightmap)
 	{
 	

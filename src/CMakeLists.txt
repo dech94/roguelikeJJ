@@ -46,12 +46,14 @@ add_executable(Game
   local/Tilemap.cc
   local/Obstaclemap.cc
   local/Background.cc
+  local/Rewardmap.cc
   #Character
   local/Character.cc
   #Ennemy
   local/Ennemy.cc
   #TitleScreen
   local/Over.cc
+  local/HUD.cc
   #game
   Game.cpp
 )
