@@ -36,8 +36,8 @@ int main (void)
   game::Log::setLevel(game::Log::DEBUG);
 
   // initialize
-  static const int HMAP_WIDTH = 1024;
-  static const int HMAP_HEIGHT = 1024;
+  static const int HMAP_WIDTH = 200;
+  static const int HMAP_HEIGHT = 200;
   static const int MARGEX = HMAP_WIDTH*32 - 1000;
   static const int MARGEY = HMAP_HEIGHT*32 -1000;
 
@@ -116,7 +116,7 @@ int main (void)
   hmap.Compute();
   local::Background tmap(hmap);
   local::Obstaclemap omap(hmap);
-  local::Rewardmap rmap(hmap);
+  local::Rewardmap rmap(hmap,seed,HMAP_WIDTH, HMAP_HEIGHT);
   if (!tmap.load(sf::Vector2u(32,32), "tile.png"))
   {
   	return -1;
@@ -211,7 +211,24 @@ if(!gameOver){
 	gameOver=e1.getStatus();
 
 		//Objectif
-	int key = rmap.isColecable(perso.getHitBox());
+	int key = rmap.isColecable(perso.getHitBox(),HMAP_WIDTH,HMAP_HEIGHT);
+	switch(key)
+	{
+		case 1 :
+			hud.update(perso.getPosition(), 1, 0, 0, 0);
+			break;
+		case 2 :
+			hud.update(perso.getPosition(), 0, 1, 0, 0);
+			break;
+		case 3 :
+			hud.update(perso.getPosition(), 0, 0, 1, 0);
+			break;
+		case 4 :
+			hud.update(perso.getPosition(), 0, 0, 0, 1);
+			break;
+		default :
+			break;
+	}
 
 	if (getPosition.isActive()) {
 		//printf("Position : \n - X : %f\n -Y : %f\n\n", perso.getPosition().x, perso.getPosition().y);
@@ -246,6 +263,10 @@ if(!gameOver){
 		window.draw(e1.spriteEnnemy);
 		window.draw(hud.sprite);
 		window.draw(hud.text);
+		window.draw(hud.textS);
+		window.draw(hud.textP);
+		window.draw(hud.textT);
+		window.draw(hud.textC);
 		if(gameOver == true){
 			window.draw(gameover.sprite);
 		}

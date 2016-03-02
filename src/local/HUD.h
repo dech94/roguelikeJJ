@@ -15,6 +15,10 @@ namespace local{
 		sf::Sprite sprite;
 		sf::Texture m_texture;
 		sf::Text text;
+		sf::Text textS;
+		sf::Text textP;
+		sf::Text textT;
+		sf::Text textC;
 
 	private:
 		int m_sable;
