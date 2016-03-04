@@ -51,6 +51,7 @@ add_executable(Game
   local/Character.cc
   #Ennemy
   local/Ennemy.cc
+  local/Wave.cc
   #TitleScreen
   local/Over.cc
   local/HUD.cc

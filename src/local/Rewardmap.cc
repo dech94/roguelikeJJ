@@ -15,12 +15,11 @@ namespace local
 		std::uniform_int_distribution<int> posX(32, HMAP_WIDTH-32);
 		std::uniform_int_distribution<int> posY(32, HMAP_HEIGHT-32);
 		sf::Vector2u position;
-		m_reward.resize(1000);
-		for (int i = 0; i<1000 ; ++i) 
+		m_reward.resize(100);
+		for (int i = 0; i<100 ; ++i) 
 		{
 			position.x = posX(engine);
 			position.y = posY(engine);
-			printf("%d, %d \n",position.x,position.y);
 			m_reward[i]=position;
 		}
 	}
@@ -48,7 +47,7 @@ namespace local
 				int tileNum = 0;
 				sf::Vector2u tmp = {i,j};
 
-				for (unsigned k = 0; k < 1000; k++)
+				for (unsigned k = 0; k < 100; k++)
 				{
 					if(m_reward[k] == tmp)
 					{
@@ -132,7 +131,6 @@ namespace local
 			position.x = posX(engine);
 			position.y = posY(engine);
 			m_reward[tmp]=position;
-			printf("%d, %d \n",position.x,position.y);
 		}
 		return key;
 	}

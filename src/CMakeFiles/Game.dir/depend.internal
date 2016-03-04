@@ -34,6 +34,7 @@ CMakeFiles/Game.dir/Game.cpp.o
  local/Over.h
  local/Rewardmap.h
  local/Tilemap.h
+ local/Wave.h
 CMakeFiles/Game.dir/game/Action.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/game/Action.cc
  /home/dech94/Documents/git/roguelikeJJ/src/game/Action.h
@@ -109,7 +110,6 @@ CMakeFiles/Game.dir/local/Character.cc.o
 CMakeFiles/Game.dir/local/Ennemy.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
- game/Entity.h
 CMakeFiles/Game.dir/local/HUD.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/HUD.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/HUD.h
@@ -147,3 +147,7 @@ CMakeFiles/Game.dir/local/Tilemap.cc.o
  /home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.cc
  /home/dech94/Documents/git/roguelikeJJ/src/local/Tilemap.h
  game/Vector.h
+CMakeFiles/Game.dir/local/Wave.cc.o
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Wave.cc
+ /home/dech94/Documents/git/roguelikeJJ/src/local/Wave.h

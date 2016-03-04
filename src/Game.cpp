@@ -27,6 +27,7 @@
 #include <local/Ennemy.h>
 #include <local/Over.h>
 #include <local/HUD.h>
+#include<local/Wave.h>
 #include <chrono>
 #include <stdio.h>
 #include <cmath>
@@ -140,11 +141,8 @@ int main (void)
   }
 
   //Ennemy
-  local::Ennemy e1(posCamX+100, posCamY+100);
-  if (!e1.load(sf::Vector2u(32,32), "bat.png"))
-  {
-  	return -1;
-  }
+  local::Wave e1(perso.getPosition().x, perso.getPosition().y, 25, seed,HMAP_WIDTH, HMAP_HEIGHT);
+
 
   //TitleScreen
   local::HUD hud;
@@ -206,9 +204,6 @@ if(!gameOver){
 
 	}
 }
-		//Ennemy tracking
-	e1.attack(perso.getPosition().x,perso.getPosition().y,MARGEX,MARGEY);
-	gameOver=e1.getStatus();
 
 		//Objectif
 	int key = rmap.isColecable(perso.getHitBox(),HMAP_WIDTH,HMAP_HEIGHT);
@@ -247,7 +242,8 @@ if(!gameOver){
 		tmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		omap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
 		rmap.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
-		e1.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
+		e1.update(perso.getPosition().x,perso.getPosition().y,MARGEX,MARGEY);
+		gameOver=e1.getStatus();
 		gameover.update(perso.getPosition());
 		hud.update(perso.getPosition(),0,0,0,0);
 		perso.update(sf::Vector2u(32,32), perso.getPosition().x, perso.getPosition().y);
@@ -260,7 +256,9 @@ if(!gameOver){
 		window.draw(omap);
 		window.draw(rmap);
 		window.draw(perso.spritePerso);
-		window.draw(e1.spriteEnnemy);
+		for(int e = 0; e < 25; ++e){
+			window.draw(e1.getSprite(e));
+		}
 		window.draw(hud.sprite);
 		window.draw(hud.text);
 		window.draw(hud.textS);

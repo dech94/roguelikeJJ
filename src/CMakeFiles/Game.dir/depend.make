@@ -33,6 +33,7 @@ CMakeFiles/Game.dir/Game.cpp.o: local/Obstaclemap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Over.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Rewardmap.h
 CMakeFiles/Game.dir/Game.cpp.o: local/Tilemap.h
+CMakeFiles/Game.dir/Game.cpp.o: local/Wave.h
 
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.cc
 CMakeFiles/Game.dir/game/Action.cc.o: game/Action.h
@@ -108,7 +109,6 @@ CMakeFiles/Game.dir/local/Character.cc.o: game/ResourceManager.h
 
 CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.cc
 CMakeFiles/Game.dir/local/Ennemy.cc.o: local/Ennemy.h
-CMakeFiles/Game.dir/local/Ennemy.cc.o: game/Entity.h
 
 CMakeFiles/Game.dir/local/HUD.cc.o: local/HUD.cc
 CMakeFiles/Game.dir/local/HUD.cc.o: local/HUD.h
@@ -146,4 +146,8 @@ CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Noise.h
 CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Tilemap.cc
 CMakeFiles/Game.dir/local/Tilemap.cc.o: local/Tilemap.h
 CMakeFiles/Game.dir/local/Tilemap.cc.o: game/Vector.h
+
+CMakeFiles/Game.dir/local/Wave.cc.o: local/Ennemy.h
+CMakeFiles/Game.dir/local/Wave.cc.o: local/Wave.cc
+CMakeFiles/Game.dir/local/Wave.cc.o: local/Wave.h
 

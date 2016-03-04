@@ -65,6 +65,8 @@ local/Over.h
 -
 local/HUD.h
 -
+local/Wave.h
+-
 chrono
 -
 stdio.h
@@ -319,8 +321,6 @@ Ennemy.h
 /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
 
 /home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
-game/Entity.h
--
 SFML/Graphics.hpp
 -
 
@@ -429,6 +429,16 @@ SFML/Graphics.hpp
 -
 Heightmap.h
 /home/dech94/Documents/git/roguelikeJJ/src/local/Heightmap.h
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/Wave.cc
+Wave.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Wave.h
+
+/home/dech94/Documents/git/roguelikeJJ/src/local/Wave.h
+Ennemy.h
+/home/dech94/Documents/git/roguelikeJJ/src/local/Ennemy.h
+random
+-
 
 game/Action.h
 memory
@@ -581,8 +591,6 @@ SFML/Graphics.hpp
 -
 
 local/Ennemy.h
-game/Entity.h
--
 SFML/Graphics.hpp
 -
 
@@ -661,4 +669,10 @@ SFML/Graphics.hpp
 -
 Heightmap.h
 local/Heightmap.h
+
+local/Wave.h
+Ennemy.h
+local/Ennemy.h
+random
+-
 

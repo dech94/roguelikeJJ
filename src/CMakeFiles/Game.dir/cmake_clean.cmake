@@ -23,6 +23,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/local/Rewardmap.cc.o"
   "CMakeFiles/Game.dir/local/Character.cc.o"
   "CMakeFiles/Game.dir/local/Ennemy.cc.o"
+  "CMakeFiles/Game.dir/local/Wave.cc.o"
   "CMakeFiles/Game.dir/local/Over.cc.o"
   "CMakeFiles/Game.dir/local/HUD.cc.o"
   "CMakeFiles/Game.dir/Game.cpp.o"

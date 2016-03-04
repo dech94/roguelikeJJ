@@ -1,14 +1,13 @@
 #ifndef ENNEMY_H
 #define ENNEMY_H
 
-#include <game/Entity.h>
 #include <SFML/Graphics.hpp>
 
 namespace local{
 	class Ennemy
 	{
 	public:
-		explicit Ennemy(int x, int y);
+		explicit Ennemy();
 		virtual ~Ennemy();
 		sf::Vector2f getPosition();
 		int getDir();

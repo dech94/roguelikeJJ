@@ -762,6 +762,30 @@ local/Tilemap.cc.s:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Tilemap.cc.s
 .PHONY : local/Tilemap.cc.s
 
+local/Wave.o: local/Wave.cc.o
+.PHONY : local/Wave.o
+
+# target to build an object file
+local/Wave.cc.o:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Wave.cc.o
+.PHONY : local/Wave.cc.o
+
+local/Wave.i: local/Wave.cc.i
+.PHONY : local/Wave.i
+
+# target to preprocess a source file
+local/Wave.cc.i:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Wave.cc.i
+.PHONY : local/Wave.cc.i
+
+local/Wave.s: local/Wave.cc.s
+.PHONY : local/Wave.s
+
+# target to generate assembly for a file
+local/Wave.cc.s:
+	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/local/Wave.cc.s
+.PHONY : local/Wave.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -852,6 +876,9 @@ help:
 	@echo "... local/Tilemap.o"
 	@echo "... local/Tilemap.i"
 	@echo "... local/Tilemap.s"
+	@echo "... local/Wave.o"
+	@echo "... local/Wave.i"
+	@echo "... local/Wave.s"
 .PHONY : help
 
 
