@@ -260,7 +260,7 @@ if(!gameOver){
 			window.draw(e1.getSprite(e));
 		}
 		window.draw(hud.sprite);
-		window.draw(hud.text);
+		//window.draw(hud.text);
 		window.draw(hud.textS);
 		window.draw(hud.textP);
 		window.draw(hud.textT);

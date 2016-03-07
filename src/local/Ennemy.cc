@@ -56,7 +56,7 @@ namespace local {
 		int nextX = m_charPos.x;
 		int nextY = m_charPos.y;
 		int dir = 5;
-		if(m_charPos.y - posPersoY == 0){
+		if(m_charPos.y - posPersoY < 8 && m_charPos.y - posPersoY > -8){
 			if (m_charPos.x - posPersoX > 0 && m_charPos.x - posPersoX < 550)
 			{
 				dir = 2;
@@ -65,7 +65,7 @@ namespace local {
 			{
 				dir = 3;
 			}
-			else if (m_charPos.x - posPersoX == 0)
+			else if (m_charPos.x - posPersoX < 8 && m_charPos.x - posPersoX > -8)
 			{
 				m_gameOver = true;
 				dir = 5;

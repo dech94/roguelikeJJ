@@ -115,7 +115,6 @@ namespace local
 			if(rec.intersects(m_obstacle[k]))
 			{
 				key = m_type[k];
-				printf("true\n");
 				tmp = k;
 			}
 		}
