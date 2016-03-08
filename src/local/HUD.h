@@ -15,6 +15,7 @@ namespace local{
 		sf::Sprite sprite;
 		sf::Texture m_texture;
 		sf::Text text;
+		sf::Text textRang;
 		sf::Text textS;
 		sf::Text textP;
 		sf::Text textT;
@@ -25,6 +26,8 @@ namespace local{
 		int m_pomme;
 		int m_trefle;
 		int m_champi;
+		int m_score;
+		std::string m_rang;
 		sf::Font m_font;
 	};
 }

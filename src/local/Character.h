@@ -24,7 +24,7 @@ namespace local{
 		
 	private:
 		sf::Vector2f m_charPos;
-		const static int m_speed = 4; //in pixel
+		const static int m_speed = 2; //in pixel
 		sf::Texture m_skin;
 		sf::VertexArray m_character;
 		int m_dirCharacter;
